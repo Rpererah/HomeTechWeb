@@ -64,7 +64,7 @@
                 <li><a href="#services-section" class="nav-link">Serviços</a></li>
                 <li><a href="#projects-section" class="nav-link">Projeto</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contaco</a></li>
+                <li><a href="#contact-section" class="nav-link">Contato</a></li>
               </ul>
             </nav>
 

@@ -2,8 +2,8 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-3">
-            <h3 class="footer-title">Services</h3>
-            <p><span class="d-inline-block d-md-block">203 Fake St. Mountain View,</span> San Francisco, California, USA</p>
+            <h3 class="footer-title">Serviços</h3>
+            <p><span class="d-inline-block d-md-block">Av. Eng. Fábio Roberto Barnabé, 3405 - Jardim Regina, Indaiatuba - SP  </p>
           </div>
           <div class="col-md-5 mx-auto">
             <div class="row">

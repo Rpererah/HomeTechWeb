@@ -64,7 +64,7 @@
                 <li><a href="#services-section" class="nav-link">Serviços</a></li>
                 <li><a href="#projects-section" class="nav-link">Projeto</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                <li><a href="#contact-section" class="nav-link">Contaco</a></li>
               </ul>
             </nav>
 
@@ -80,7 +80,7 @@
     </header>
 
 
-    <div class="site-blocks-cover overlay bg-light" style="background-image: url('images/hero_bg_1.jpg'); " id="home-section">
+    <div class="site-blocks-cover overlay bg-light" style="background-image: url('images/hero_bg_1.png'); " id="home-section">
 
       <div class="container">
         <div class="row justify-content-center">
@@ -88,9 +88,9 @@
           <div class="col-12 text-center align-self-center text-intro">
             <div class="row justify-content-center">
               <div class="col-lg-8">
-                <h1 class="text-white" data-aos="fade-up" data-aos-delay="">We Are Digital Services</h1>
-                <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos magnam maxime voluptates libero, nobis impedit aut corrupti sunt possimus.</p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="#services-section" class="btn smoothscroll btn-primary">Our Services</a></p>
+                <h1 class="text-white" data-aos="fade-up" data-aos-delay="">Automatize o que desejar</h1>
+                <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">Tornando-se acessivel cada dia mais</p>
+                <p data-aos="fade-up" data-aos-delay="200"><a href="#services-section" class="btn smoothscroll btn-primary">Conheça nossos serviços</a></p>
 
               </div>
             </div>
@@ -107,20 +107,23 @@
       <div class="container">
         <div class="row ">
           <div class="col-12 mb-4 position-relative">
-            <h2 class="section-title">About Us</h2>
+            <h2 class="section-title">Sobre A Hometech</h2>
           </div>
           <div class="col-lg-4">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-
-            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+          <p>O projeto Home Tech vem com o objetivo inicial de criar um controle que foque na automação oferecendo
+               um aplicativo que entregue para o usuário uma experiência completa. O trabalho foi feito em Javascript e PHP. O projeto visa auxiliar pessoas com e sem deficiências,
+               fazendo com que elas tenham uma interação mais simples na sua casa, de maneira com que: </p>
           </div>
           <div class="col-lg-4">
             <img src="images/about.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4">
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-
-            <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+          <ul class="list-unstyled ul-check success">
+                <li>lâmpadas</li>
+                <li>fechadura</li>
+                <li>alarmes</li>
+                <li>e muito mais sejam manuseadas diretamente pelo celular</li>
+              </ul>
           </div>
           
           
@@ -133,7 +136,7 @@
       <div class="container">
         <div class="row ">
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Services</h2>
+            <h2 class="section-title text-center mb-5">Serviços</h2>
           </div>
           
           <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="">
@@ -142,8 +145,8 @@
                 <img src="images/flaticon/svg/002-travel-1.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
-                <h3>Content Marketing</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3>Consultoria a domicílio</h3>
+                <p>Ao contratar-nos um técnico irá até sua residencia verficar suas instalações elétricas, e explicar nossos planos</p>
               </div>
             </div>
           </div>
@@ -154,8 +157,8 @@
                 <img src="images/flaticon/svg/001-travel.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
-                <h3>Social Media Marketing</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3>Análise de necessidade</h3>
+                <p>Fale com um de nossos atendentes para descobrir qual dos nossos serviços é o melhor para você</p>
               </div>
             </div>
           </div>
@@ -166,8 +169,8 @@
                 <img src="images/flaticon/svg/003-travel-2.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
-                <h3>Brand &amp; Logo Design</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3>Suporte contínuo</h3>
+                <p>Nossos técnicos sempre estaram disponíveis para responder o mais depressa suas dúvidas, e mandar algum(técnico) se necessário</p>
               </div>
             </div>
           </div>
@@ -178,8 +181,8 @@
                 <img src="images/flaticon/svg/004-travel-3.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
-                <h3>Social Media Advertising</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3>Suporte à pessoas com deficiência</h3>
+                <p>Nossos serviços são com foco em acessibilidade</p>
               </div>
             </div>
           </div>
@@ -190,8 +193,8 @@
                 <img src="images/flaticon/svg/005-travel-4.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
-                <h3>Social Media Advertising</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <h3>Total Controle pelo celular</h3>
+                <p>Temos aplicativo para você ter controle 100% pelo celular</p>
               </div>
             </div>
           </div>
@@ -203,7 +206,7 @@
               </div>
               <div class="service-about">
                 <h3>Web Design / Development</h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p>Estamos o tempo todo tentando trazer nosso Design o mais proximo de todos os usuarios</p>
               </div>
             </div>
           </div>
@@ -219,16 +222,16 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 position-relative">
-            <h2 class="section-title text-center mb-5">Projects</h2>
+            <h2 class="section-title text-center mb-5">Projetos</h2>
           </div>
         </div>
 
         <div class="row justify-content-center mb-5" data-aos="fade">
           <div id="filters" class="filters text-center button-group col-md-7">
             <button class="btn btn-primary active" data-filter="*">All</button>
-            <button class="btn btn-primary" data-filter=".web">Web</button>
-            <button class="btn btn-primary" data-filter=".design">Design</button>
-            <button class="btn btn-primary" data-filter=".brand">Brand</button>
+            <button class="btn btn-primary" data-filter=".web">Deficiente auditivo</button>
+            <button class="btn btn-primary" data-filter=".design">Visual</button>
+            <button class="btn btn-primary" data-filter=".brand">Publico em Geral</button>
           </div>
         </div>  
         
@@ -353,17 +356,17 @@
         <div class="row">
           
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Blog Posts</h2>
+            <h2 class="section-title text-center mb-5">Nosso Blog</h2>
           </div>
 
           <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
             <div class="blog_entry">
               <a href="single.html"><img src="images/blog_1.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="single.html">A small river named Duden flows by their place</a></h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p class="more"><a href="single.html">Read More</a></p>
+                <h3><a href="single.html">O que é automação?</a></h3>
+                <span class="date"> Julio Cesar April 25, 2019</span>
+                <p>“É uma nova experiência em moradia, que proporciona conexão e controle da sua casa e dos seus aparelhos eletrônicos.”</p>
+                <p class="more"><a href="single.html">Leia Mais</a></p>
               </div>
             </div>
           </div>
@@ -372,10 +375,10 @@
             <div class="blog_entry">
               <a href="single.html"><img src="images/blog_2.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="single.html">A small river named Duden flows by their place</a></h3>
-                <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p class="more"><a href="single.html">Read More</a></p>
+                <h3><a href="single.html">O que dá para automatizar?</a></h3>
+                <span class="date">Julio Cesar April 25, 2019</span>
+                <p>“quase tudo que tem acionamento eletrônico” pode ser automatizado.</p>
+                <p class="more"><a href="single.html">Leia Mais</a></p>
               </div>
             </div>
           </div>
@@ -384,10 +387,10 @@
             <div class="blog_entry">
               <a href="single.html"><img src="images/blog_3.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4 bg-white">
-                <h3><a href="single.html">A small river named Duden flows by their place</a></h3>
+                <h3><a href="single.html">Qual o custo?</a></h3>
                 <span class="date">April 25, 2019</span>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p class="more"><a href="single.html">Read More</a></p>
+                <p>“Tudo depende do grau de integração desejado pelo morador”, explica Muratori.</p>
+                <p class="more"><a href="single.html">Leia Mais</a></p>
               </div>
             </div>
           </div>
@@ -400,7 +403,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12 mb-5 position-relative">
-            <h2 class="section-title text-center mb-5">Contact Form</h2>
+            <h2 class="section-title text-center mb-5">Contato</h2>
           </div>
         </div>
         <div class="row justify-content-between">
@@ -408,69 +411,53 @@
             <form action="#" class="form">
               <div class="row mb-4">
                 <div class="form-group col-6">
-                  <input type="text" class="form-control" placeholder="First name">
+                  <input type="text" class="form-control" placeholder="Nome">
                 </div>
                 <div class="form-group col-6">
-                  <input type="text" class="form-control" placeholder="Full name">
+                  <input type="text" class="form-control" placeholder="Sobrenome">
                 </div>
               </div>
 
               <div class="row mb-4">
                 <div class="form-group col-12">
-                  <input type="email" class="form-control" placeholder="Email address">
+                  <input type="email" class="form-control" placeholder="Endereço de Email">
                 </div>
               </div>
 
               <div class="row mb-4">
                 <div class="form-group col-12">
-                  <input type="text" class="form-control" placeholder="Subject of the message">
+                  <input type="text" class="form-control" placeholder="Assunto">
                 </div>
               </div>
 
               <div class="row mb-4">
                 <div class="form-group col-12">
-                  <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Type your message here.."></textarea>
+                  <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Escreva sua mensagem aqui"></textarea>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-md-6">
-                  <input type="submit" class="btn btn-primary" value="Send Message">
+                <div class="col-md-6" style="margin-bottom:20px">
+                  <input type="submit" class="btn btn-primary" value="Enviar Mensagem">
                 </div>
               </div>
               
             </form>
           </div>
           <div class="col-lg-5">
-            <h3>London</h3>
+            <h3>São Paulo</h3>
             <ul class="list-unstyled mb-5">
               <li class="mb-3">
-                <strong class="d-block mb-1">Address</strong>
-                <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
+                <strong class="d-block mb-1">Endereço</strong>
+                <span>Av. Eng. Fábio Roberto Barnabé, 3405 - Jardim Regina, Indaiatuba - SP  </span>
               </li>
               <li class="mb-3">
-                <strong class="d-block mb-1">Phone</strong>
-                <span>+1 232 3235 324</span>
-              </li>
-              <li class="mb-3">
-                <strong class="d-block mb-1">Email</strong>
-                <span>youremail@domain.com</span>
-              </li>
-            </ul>
-
-            <h3>New York</h3>
-            <ul class="list-unstyled">
-              <li class="mb-3">
-                <strong class="d-block mb-1">Address</strong>
-                <span>203 Fake St. Mountain View, San Francisco, California, USA</span>
-              </li>
-              <li class="mb-3">
-                <strong class="d-block mb-1">Phone</strong>
-                <span>+1 232 3235 324</span>
+                <strong class="d-block mb-1">Telefone</strong>
+                <span>+55 19952845364</span>
               </li>
               <li class="mb-3">
                 <strong class="d-block mb-1">Email</strong>
-                <span>youremail@domain.com</span>
+                <span>HtHometech@gmail.com</span>
               </li>
             </ul>
           </div>

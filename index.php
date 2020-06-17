@@ -59,10 +59,10 @@
           <div class="col-8">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#about-section" class="nav-link">About</a></li>
-                <li><a href="#services-section" class="nav-link">Services</a></li>
-                <li><a href="#projects-section" class="nav-link">Projects</a></li>
+                <li><a href="#home-section" class="nav-link">Inicio</a></li>
+                <li><a href="#about-section" class="nav-link">Sobre Nós</a></li>
+                <li><a href="#services-section" class="nav-link">Serviços</a></li>
+                <li><a href="#projects-section" class="nav-link">Projeto</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </ul>
@@ -554,5 +554,15 @@
 
   
   <script src="js/main.js"></script>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
   </body>
 </html>

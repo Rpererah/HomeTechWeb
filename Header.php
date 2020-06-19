@@ -8,6 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -65,6 +68,7 @@
                 <li><a href="#projects-section" class="nav-link">Projeto</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contato</a></li>
+                <li><a href="crud/index.php" class="nav-link">CRUD-Teste</a></li>
               </ul>
             </nav>
 

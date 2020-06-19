@@ -65,6 +65,7 @@
                 <li><a href="#projects-section" class="nav-link">Projeto</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contato</a></li>
+                <li><a href="crud/index.php" class="nav-link">Crud</a></li>
               </ul>
             </nav>
 

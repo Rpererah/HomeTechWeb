@@ -68,7 +68,11 @@
                 <li><a href="#projects-section" class="nav-link">Projeto</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contato</a></li>
+<<<<<<< HEAD
                 <li><a href="crud/index.php" class="nav-link">CRUD-Teste</a></li>
+=======
+                <li><a href="crud/index.php" class="nav-link">Crud</a></li>
+>>>>>>> 2ce9edd166f776c062115e3e0c2bf59954807e35
               </ul>
             </nav>
 

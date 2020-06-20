@@ -10,7 +10,7 @@ if (null == $id) {
 } else {
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM usuario where USER_ID = ?";
+    $sql = "SELECT * FROM usuario where id = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -75,7 +75,7 @@ if (null == $id) {
 
                     <div class="control-group">
                         <label class="control-label">Rua</label>
-                        <div class="controls form-check disabled">
+                        <div class="controls form-control disabled">
                             <label class="carousel-inner">
                                 <?php echo $data['RUA']; ?>
                             </label>
@@ -84,7 +84,7 @@ if (null == $id) {
 
                     <div class="control-group">
                         <label class="control-label">Bairro</label>
-                        <div class="controls form-check disabled">
+                        <div class="controls form-control disabled">
                             <label class="carousel-inner">
                                 <?php echo $data['BAIRRO']; ?>
                             </label>
@@ -93,7 +93,7 @@ if (null == $id) {
 
                     <div class="control-group">
                         <label class="control-label">Cidade</label>
-                        <div class="controls form-check disabled">
+                        <div class="controls form-control disabled">
                             <label class="carousel-inner">
                                 <?php echo $data['CIDADE']; ?>
                             </label>
@@ -102,7 +102,7 @@ if (null == $id) {
 
                     <div class="control-group">
                         <label class="control-label">UF</label>
-                        <div class="controls form-check disabled">
+                        <div class="controls form-control disabled">
                             <label class="carousel-inner">
                                 <?php echo $data['UF']; ?>
                             </label>

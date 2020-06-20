@@ -116,10 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Tipo</label>
+                        <label class="control-label"></label>
                         <div class="controls">
-                            <input size="35" class="form-control" name="USER_TIPO" type="number" placeholder="Tipo"
-                                   value="<?php echo !empty($tipo) ? $tipo : ''; ?>">
+                            <input size="35" class="form-control" name="USER_TIPO" type="hidden" placeholder="Tipo"
+                                   value="<?php echo !empty($tipo) ? $tipo : 0; ?>">
                         </div>
                     </div>
 
@@ -181,7 +181,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="control-group <?php !empty($ufErro) ? 'error ' : ''; ?>">
                         <label class="control-label">UF</label>
                         <div class="controls">
-                            <input size="40" class="form-control" name="UF" type="text" placeholder="UF"
+                            <input size="40"  class="form-control" name="UF" type="text" placeholder="UF" maxlength="2"
                                    value="<?php echo !empty($uf) ? $uf : ''; ?>">
                             <?php if (!empty($ufErro)): ?>
                                 <span class="text-danger"><?php echo $ufErro; ?></span>

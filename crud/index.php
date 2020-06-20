@@ -56,12 +56,12 @@
                         <?php
                         include 'banco.php';
                         $pdo = Banco::conectar();
-                        $sql = 'SELECT * FROM usuario ORDER BY USER_ID DESC';
+                        $sql = 'SELECT * FROM usuario ORDER BY id DESC';
 
                         foreach($pdo->query($sql)as $row)
                         {
                             echo '<tr>';
-			                      echo '<th scope="row">'. $row['USER_ID'] . '</th>';
+			                      echo '<th scope="row">'. $row['id'] . '</th>';
                             echo '<td>'. $row['USER_NOME'] . '</td>';
                             echo '<td>'. $row['USER_TIPO'] . '</td>';
                             echo '<td>'. $row['USER_DEFICIENCIA'] . '</td>';
@@ -71,11 +71,11 @@
                             echo '<td>'. $row['CIDADE'] . '</td>';
                             echo '<td>'. $row['UF'] . '</td>';
                             echo '<td width=250>';
-                            echo '<a class="btn btn-primary" href="read.php?id='.$row['USER_ID'].'">Info</a>';
+                            echo '<a class="btn btn-primary" href="read.php?id='.$row['id'].'">Info</a>';
                             echo ' ';
-                            echo '<a class="btn btn-warning" href="update.php?id='.$row['USER_ID'].'">Atualizar</a>';
+                            echo '<a class="btn btn-warning" href="update.php?id='.$row['id'].'">Atualizar</a>';
                             echo ' ';
-                            echo '<a class="btn btn-danger" href="delete.php?id='.$row['USER_ID'].'">Excluir</a>';
+                            echo '<a class="btn btn-danger" href="delete.php?id='.$row['id'].'">Excluir</a>';
                             echo '</td>';
                             echo '</tr>';
                         }

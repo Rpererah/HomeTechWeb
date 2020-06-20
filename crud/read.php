@@ -10,7 +10,7 @@ if (null == $id) {
 } else {
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM pessoa where id = ?";
+    $sql = "SELECT * FROM usuario where USER_ID = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -25,15 +25,15 @@ if (null == $id) {
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Informações do Contato</title>
+    <title>Informações do Cliente</title>
 </head>
 
 <body>
 <div class="container">
-    <div class="span10 offset1">
+    <div class="span15 offset1">
         <div class="card">
             <div class="card-header">
-                <h3 class="well">Informações do Contato</h3>
+                <h3 class="well">Informações do Cliente</h3>
             </div>
             <div class="container">
                 <div class="form-horizontal">
@@ -41,43 +41,70 @@ if (null == $id) {
                         <label class="control-label">Nome</label>
                         <div class="controls form-control">
                             <label class="carousel-inner">
-                                <?php echo $data['nome']; ?>
+                                <?php echo $data['USER_NOME']; ?>
                             </label>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Endereço</label>
+                        <label class="control-label">Tipo</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['endereco']; ?>
+                                <?php echo $data['USER_TIPO']; ?>
                             </label>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Telefone</label>
+                        <label class="control-label">Deficiência</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['telefone']; ?>
+                                <?php echo $data['USER_DEFICIENCIA']; ?>
                             </label>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Email</label>
+                        <label class="control-label">Idade</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['email']; ?>
+                                <?php echo $data['USER_IDADE']; ?>
                             </label>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Sexo</label>
+                        <label class="control-label">Rua</label>
                         <div class="controls form-check disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['sexo']; ?>
+                                <?php echo $data['RUA']; ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Bairro</label>
+                        <div class="controls form-check disabled">
+                            <label class="carousel-inner">
+                                <?php echo $data['BAIRRO']; ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Cidade</label>
+                        <div class="controls form-check disabled">
+                            <label class="carousel-inner">
+                                <?php echo $data['CIDADE']; ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">UF</label>
+                        <div class="controls form-check disabled">
+                            <label class="carousel-inner">
+                                <?php echo $data['UF']; ?>
                             </label>
                         </div>
                     </div>

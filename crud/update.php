@@ -3,8 +3,8 @@
 require 'banco.php';
 
 $id = null;
-if (!empty($_GET['id'])) {
-    $id = $_REQUEST['id'];
+if (!empty($_GET['USER_ID'])) {
+    $id = $_REQUEST['USER_ID'];
 }
 
 if (null == $id) {
@@ -14,16 +14,22 @@ if (null == $id) {
 if (!empty($_POST)) {
 
     $nomeErro = null;
-    $enderecoErro = null;
-    $telefoneErro = null;
-    $emailErro = null;
-    $sexoErro = null;
+    $tipoErro = null;
+    $deficienciaErro = null;
+    $idadeErro = null;
+    $ruaErro = null;
+    $bairroErro = null;
+    $cidadeErro = null;
+    $ufErro = null;
 
-    $nome = $_POST['nome'];
-    $endereco = $_POST['endereco'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $sexo = $_POST['sexo'];
+    $nome = $_POST['USER_NOME'];
+    $tipo = $_POST['USER_TIPO'];
+    $deficiencia = $_POST['USER_DEFICIENCIA'];
+    $idade = $_POST['USER_IDADE'];
+    $rua = $_POST['RUA'];
+    $bairro = $_POST['BAIRRO'];
+    $cidade = $_POST['CIDADE'];
+    $uf = $_POST['UF'];
 
     //Validação
     $validacao = true;

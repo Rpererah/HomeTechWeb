@@ -5,35 +5,34 @@
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
+    <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Página Inicial</title>
 </head>
 
 <body>
+<div class="container">
 
-<div class="fixed-top">
+        <!-- Barra de navegação  -->
+        <div class="fixed-top">
   <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-</div>
+  </div>
+    <a href="./../index.php">
   <nav class="navbar navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M5.854 4.646a.5.5 0 0 1 0 .708L3.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0z"/>
+  <path fill-rule="evenodd" d="M2.5 8a.5.5 0 0 1 .5-.5h10.5a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+</svg>
     </button>
+    </a>
+    <div style="color:white"><b>Painel de controle Hometech</b></div>
   </nav>
 </div>
-
-        <div class="container">
-          <div class="jumbotron">
-            <div class="row">
-                <h2>CRUD em PHP <span class="badge badge-secondary">v 1.0.0 Rafael</span></h2>
-            </div>
-          </div>
-            </br>
+<br>
+<br>
+<br>
             <div class="row">
                 <p>
                     <a href="create.php" class="btn btn-success">Adicionar</a>

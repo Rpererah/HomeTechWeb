@@ -10,7 +10,7 @@
                fazendo com que elas tenham uma interação mais simples na sua casa, de maneira com que: </p>
           </div>
           <div class="col-lg-4">
-            <img src="images/about.jpg" alt="Image" class="img-fluid">
+            <img src="./images/LHT3.png" alt="Image" class="img-fluid">
           </div>
           <div class="col-lg-4">
           <ul class="list-unstyled ul-check success">

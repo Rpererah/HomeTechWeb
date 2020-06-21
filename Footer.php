@@ -1,47 +1,42 @@
 <footer class="site-section bg-light footer">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md-3">
-            <h3 class="footer-title">Serviços</h3>
-            <p><span class="d-inline-block d-md-block">Av. Eng. Fábio Roberto Barnabé, 3405 - Jardim Regina, Indaiatuba - SP  </p>
+          <div class="col-lg-3">
+            <h3 class="footer-title">Sobre o projeto</h3>
+            <p><span class="d-inline-block d-md-block">O projeto visa auxiliar pessoas com e sem deficiências, fazendo com que elas tenham uma interação mais simples na sua casa</p>
           </div>
-          <div class="col-md-5 mx-auto">
+          <div class="col-md-8 mx-auto">
             <div class="row">
-              <div class="col-lg-4">
-                <h3 class="footer-title">Services</h3>
+              <div class="col-lg-3">
+                <h3 class="footer-title">Serviços</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#">Content Marketing</a></li>
-                  <li><a href="#">Brand & Logo</a></li>
-                  <li><a href="#">Social Advertising</a></li>
+                  <li><a href="#services-section">Instalação</a></li>
+                  <li><a href="#services-section">Automação</a></li>
+                  <li><a href="#services-section">Suporte</a></li>
                 </ul>
               </div>
-              <div class="col-lg-4">
-                <h3 class="footer-title">Resources</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Social Marketing</a></li>
-                  <li><a href="#">Web Design</a></li>
-                  <li><a href="#">Web Development</a></li>
-                </ul>
+        
+          <div class="col-lg-3">
+            <h3 class="footer-title">Segue a gente</h3>
+            <a target="_blank" href="//www.twitter.com" class="social-circle m-2"><span class="icon-twitter"></span></a>
+            <a target="_blank" href="//www.facebook.com/hometech.fiec.1" class="social-circle m-2"><span class="icon-facebook"></span></a>
+            <a target="_blank" href="//www.instagram.com" class="social-circle m-2"><span class="icon-instagram"></span></a>
+            <a target="_blank" href="//www.linkedin.com" class="social-circle m-2"><span class="icon-linkedin"></span></a>
+          
+         </div>
+
+        <div class="col-lg-6">
+            <h2 class="footer-title mb-6">Se Inscreva</h2>
+            <form action="#" method="post" class="footer-subscribe">
+              <div class="input-group mb-6">
+                <input type="text" class="form-control border-secondary text-black bg-transparent" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                  <button class="btn btn-secondary" type="button" id="button-addon2">Enviar</button>
+                </div>
               </div>
-              <div class="col-lg-4">
-                <h3 class="footer-title">Templates</h3>
-                <ul class="list-unstyled">
-                  <li><a href="#">Illustration</a></li>
-                  <li><a href="#">Video Editing</a></li>
-                  <li><a href="#">Copywriting</a></li>
-                </ul>
-              </div>
-            </div>
+            </form>
           </div>
-          <div class="col-md-3">
-            <h3 class="footer-title">Follow Me</h3>
-            <a href="#" class="social-circle m-2"><span class="icon-twitter"></span></a>
-            <a href="#" class="social-circle m-2"><span class="icon-facebook"></span></a>
-            <a href="#" class="social-circle m-2"><span class="icon-instagram"></span></a>
-            <a href="#" class="social-circle m-2"><span class="icon-dribbble"></span></a>
-            <a href="#" class="social-circle m-2"><span class="icon-linkedin"></span></a>
-          </div>
-        </div>
+        
 
         <div class="row">
           <div class="col-12 text-center">

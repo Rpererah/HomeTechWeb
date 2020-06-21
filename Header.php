@@ -58,7 +58,7 @@
         <div class="row align-items-center justify-content-center">
 
           <div class="col-4">
-            <h1 class="m-0 site-logo"><a href="index.html">HOMETECH</a></h1>
+            <a href="index.php"><img src="images/LHT.png" height="108px" width="177px" alt=""></a></h1>
           </div>
 
           <div class="col-8">
@@ -66,11 +66,11 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Inicio</a></li>
                 <li><a href="#about-section" class="nav-link">Sobre Nós</a></li>
-                <li><a href="#services-section" class="nav-link">Serviços</a></li>
                 <li><a href="#projects-section" class="nav-link">Projeto</a></li>
+                <li><a href="#services-section" class="nav-link">Serviços</a></li>
                 <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contato</a></li>
-                <li><a href="crud/index.php" class="nav-link">Crud</a></li>
+                <li><a href="crud/index.php" class="nav-link">Administrador</a></li>
               </ul>
             </nav>
 

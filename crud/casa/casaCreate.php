@@ -6,9 +6,8 @@ require './../banco.php';
 
 // Processar so quando tenha uma chamada post
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $descricaoErro = null;
-    $house_idErro = null;
     $user_idErro = null;
+    $descricaoErro = null;
 
     if (!empty($_POST)) {
         $validacao = True;
@@ -17,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!empty($_POST['user_id'])) {
             $user_id = $_POST['user_id'];
         } else {
-            $descricaoErro = 'Por favor digite um id válido';
+            $user_idErro = 'Por favor digite um id válido';
             $validacao = False;
         }
 
@@ -67,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="control-group  <?php echo !empty($user_idErro) ? 'error ' : ''; ?>">
                         <label class="control-label">user_id</label>
                         <div class="controls">
-                            <input size="50" class="form-control" name="houseDescription" type="text" placeholder="user_id"
+                            <input size="50" class="form-control" name="user_id" type="text" placeholder="user_id"
                                    value="<?php echo !empty($user_id) ? $user_id : ''; ?>">
                             <?php if (!empty($user_idErro)): ?>
                                 <span class="text-danger"><?php echo $user_idErro; ?></span>

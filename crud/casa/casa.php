@@ -61,7 +61,7 @@
                                   echo '<td>'. $row['user_id'] . '</td>';
                             echo '<td>'. $row['houseDescription'] . '</td>';
                             echo '<td width=250>';
-                            echo '<a class="btn btn-primary" href="read.php?house_id='.$row['house_id'].'">Info</a>';
+                            echo '<a class="btn btn-primary" href="casaRead.php?house_id='.$row['house_id'].'">Info</a>';
                             echo ' ';
                             echo '<a class="btn btn-warning" href="update.php?house_id='.$row['house_id'].'">Atualizar</a>';
                             echo ' ';

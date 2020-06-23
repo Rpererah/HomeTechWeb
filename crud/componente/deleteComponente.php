@@ -37,11 +37,11 @@ if(!empty($_POST))
         <div class="container">
             <div class="span10 offset1">
                 <div class="row">
-                    <h3 class="well">Excluir Cliente</h3>
+                    <h3 class="well">Excluir Componente</h3>
                 </div>
                 <form class="form-horizontal" action="deleteComponente.php" method="post">
                     <input type="hidden" name="comp_id" value="<?php echo $id;?>" />
-                    <div class="alert alert-danger"> Deseja excluir o cliente?
+                    <div class="alert alert-danger"> Deseja excluir o componente?
                     </div>
                     <div class="form actions">
                         <button type="submit" class="btn btn-danger">Sim</button>

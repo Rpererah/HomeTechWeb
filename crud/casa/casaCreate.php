@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="./../assets/css/bootstrap.min.css">
-    <title>Adicionar Contato</title>
+    <title>Adicionar Casa</title>
 </head>
 
 <body>
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div clas="span10 offset1">
         <div class="card">
             <div class="card-header">
-                <h3 class="well"> Adicionar Contato </h3>
+                <h3 class="well"> Adicionar Casa </h3>
             </div>
             <div class="card-body">
                 <form class="form-horizontal" action="casaCreate.php" method="post">

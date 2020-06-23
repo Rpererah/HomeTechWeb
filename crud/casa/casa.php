@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="./../stylesheet" href="assets/css/bootstrap.min.css">
     <link href="/open-iconic/font/css/open-iconic-bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Página Inicial</title>
+    <title>Casa</title>
 </head>
 
 <body>
@@ -35,14 +35,14 @@
 <br>
             <div class="row">
                 <p>
-                    <a href="create.php" class="btn btn-success">Adicionar</a>
+                    <a href="casaCreate.php" class="btn btn-success">Adicionar</a>
                     <a href="./../index.php" class="btn btn-success">Usuarios</a>
                     <a href="./../componente/componente.php" class="btn btn-success">Componentes</a>
                 </p>
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">id</th>
+                            <th scope="col">house_id</th>
                             <th scope="col">user_id</th>
                             <th scope="col">Descrição</th>
                             <th scope="col">Ação</th>
@@ -50,7 +50,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include 'banco.php';
+                        include './../banco.php';
                         $pdo = Banco::conectar();
                         $sql = 'SELECT * FROM casa ORDER BY house_id ASC';
 

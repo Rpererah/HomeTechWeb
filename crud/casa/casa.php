@@ -65,7 +65,7 @@
                             echo ' ';
                             echo '<a class="btn btn-warning" href="update.php?house_id='.$row['house_id'].'">Atualizar</a>';
                             echo ' ';
-                            echo '<a class="btn btn-danger" href="delete.php?house_id='.$row['house_id'].'">Excluir</a>';
+                            echo '<a class="btn btn-danger" href="casaDelete.php?house_id='.$row['house_id'].'">Excluir</a>';
                             echo '</td>';
                             echo '</tr>';
                         }

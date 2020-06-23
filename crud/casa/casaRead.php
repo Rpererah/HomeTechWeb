@@ -25,7 +25,7 @@ if (null == $id) {
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Informações do Cliente</title>
+    <title>Informações do Componente</title>
 </head>
 
 <body>

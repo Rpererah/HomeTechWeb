@@ -4,29 +4,20 @@ require './../banco.php';
 
 $id = null;
 if (!empty($_GET['comp_id'])) {
-    $id = $_REQUEST['user_id'];
+    $id = $_REQUEST['comp_id'];
 }
 
 if (null == $id) {
-    header("Location: index.php");
+    header("Location: componente.php");
 }
 
 if (!empty($_POST)) {
 
     $nomeErro = null;
-    $emailErro = null;
-    $telefoneErro = null;
-    $deficienciaErro = null;
-    $idadeErro = null;
-    $enderecoErro = null;
+    $DescricaoErro = null;
 
-    $nome = $_POST['userName'];
-    $email = $_POST['userEmail'];
-    $telefone = $_POST['userPhone'];
-    $tipo = $_POST['userType'];
-    $deficiencia = $_POST['userDeficiency'];
-    $idade = $_POST['userAge'];
-    $endereco = $_POST['userAddress'];
+    $nome = $_POST['compName'];
+    $descricao = $_POST['compDescription'];
 
     //Validação
  $validacao = true;
@@ -35,53 +26,31 @@ if (!empty($_POST)) {
     $validacao = false;
  }
 
- if (empty($email)) {
-     $emailErro = 'Por favor digite o endereço!';
+ if (empty($descricao)) {
+     $DescricaoErro = 'Por favor digite a descrição!';
      $validacao = false;
 }
-
-if (empty($telefone)) {
-       $telefoneErro = 'Por favor preenche o campo!';
-      $validacao = false;
- }
-if (empty($deficiencia)) {
-    $deficienciaErro = 'Por favor preenche o campo!';
-   $validacao = false;
-}
-if (empty($idade)) {
-    $endereco = 'Por favor preenche o campo!';
-   $validacao = false;
-}
-if (empty($endereco)) {
-    $enderecoErro = 'Por favor preenche o campo!';
-   $validacao = false;
-}
-
 
     // update data
     if ($validacao) {
         $pdo = Banco::conectar();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "UPDATE usuario  set userName = ?, userEmail = ?, userPhone = ?, userType = ?, userDeficiency = ?, userAge = ?, userAddress = ? WHERE user_id = ?";
+        $sql = "UPDATE componente  set compName = ?, compDescription = ? WHERE comp_id = ?";
         $q = $pdo->prepare($sql);
-        $q->execute(array($nome, $email, $telefone,$tipo,$deficiencia,$idade,$endereco, $id));
+        $q->execute(array($nome, $descricao, $id));
         Banco::desconectar();
-        header("Location: index.php");
+        header("Location: componente.php");
     }
 } else {
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM usuario where user_id = ?";
+    $sql = "SELECT * FROM componente where comp_id = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);
-    $nome = $data['userName'];
-    $email = $data['userEmail'];
-    $telefone = $data['userPhone'];
-    $tipo = $data['userType'];
-    $deficiencia = $data['userDeficiency'];
-    $idade = $data['userAge'];
-    $endereco = $data['userAddress'];
+    $nome = $data['compName'];
+    $descricao = $data['compDescription'];
+
     Banco::desconectar();
 }
 ?>
@@ -97,7 +66,7 @@ if (empty($endereco)) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>Atualizar Contato</title>
+    <title>Atualizar Componente</title>
 </head>
 
 <body>
@@ -106,15 +75,15 @@ if (empty($endereco)) {
     <div class="span10 offset1">
         <div class="card">
             <div class="card-header">
-                <h3 class="well"> Atualizar Contato </h3>
+                <h3 class="well"> Atualizar Componente </h3>
             </div>
             <div class="card-body">
-                <form class="form-horizontal" action="update.php?user_id=<?php echo $id ?>" method="post">
+                <form class="form-horizontal" action="updateComponente.php?comp_id=<?php echo $id ?>" method="post">
 
                 <div class="control-group  <?php  echo !empty($nomeErro) ? 'error ' : ''; ?>">
                         <label class="control-label">Nome</label>
                         <div class="controls">
-                            <input size="50" class="form-control" name="userName" type="text" placeholder="Nome"
+                            <input size="50" class="form-control" name="compName" type="text" placeholder="Nome"
                                    value="<?php echo !empty($nome) ? $nome : ''; ?>">
                             <?php if (!empty($nomeErro)): ?>
                                 <span class="text-danger"><?php echo $nomeErro; ?></span>
@@ -122,72 +91,16 @@ if (empty($endereco)) {
                         </div>
                     </div>
 
-                    <div class="control-group <?php !empty($emailErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">Email</label>
+                    <div class="control-group <?php !empty($DescricaoErro) ? 'error ' : ''; ?>">
+                        <label class="control-label">Descrição</label>
                         <div class="controls">
-                            <input size="40" class="form-control" name="userEmail" type="text" placeholder="Email"
-                                   value="<?php echo !empty($email) ? $email : ''; ?>">
-                            <?php if (!empty($emailErro)): ?>
-                                <span class="text-danger"><?php echo $emailErro; ?></span> 
+                            <input size="40" class="form-control" name="compDescription" type="text" placeholder="Descrição"
+                                   value="<?php echo !empty($descricao) ? $descricao : ''; ?>">
+                            <?php if (!empty($DescricaoErro)): ?>
+                                <span class="text-danger"><?php echo $DescricaoErro; ?></span> 
                             <?php endif; ?>
                         </div>
                     </div>
-
-                    <div class="control-group <? !empty($telefoneErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">Telefone</label>
-                        <div class="controls">
-                            <input size="40" class="form-control" name="userPhone" type="text" placeholder="Telefone"
-                                   value="<?php echo !empty($telefone) ? $telefone : ''; ?>">
-                            <?php if (!empty($telefoneErro)): ?>
-                                <span class="text-danger"><?php echo $telefoneErro; ?></span> 
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
-                    <div class="control-group <?php echo !empty($tipoErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">tipo</label>
-                        <div class="controls">
-                            <input size="80" class="form-control" name="userType" type="number" placeholder="Tipo"
-                                   value="<?php echo !empty($tipo) ? $tipo : ''; ?>">
-                            <?php if (!empty($tipoErro)): ?>
-                                <span class="text-danger"><?php echo $tipoErro; ?></span> -->
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
-                    <div class="control-group <?php echo !empty($deficienciaErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">Deficiência</label>
-                        <div class="controls">
-                            <input size="80" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
-                                   value="<?php echo !empty($deficiencia) ? $deficiencia : ''; ?>">
-                            <?php if (!empty($deficienciaErro)): ?>
-                                <span class="text-danger"><?php echo $deficienciaErro; ?></span> -->
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
-                    <div class="control-group <?php !empty($idadeErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">Idade</label>
-                        <div class="controls">
-                            <input size="40" class="form-control" name="userAge" type="number" placeholder="Idade"
-                                   value="<?php echo !empty($idade) ? $idade : ''; ?>">
-                            <?php if (!empty($idadeErro)): ?>
-                                <span class="text-danger"><?php echo $idadeErro; ?></span> 
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
-                    <div class="control-group <?php !empty($enderecoErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">Endereço Completo</label>
-                        <div class="controls">
-                            <input size="40" class="form-control" name="userAddress" type="text" placeholder="Endereço"
-                                   value="<?php echo !empty($endereco) ? $endereco : ''; ?>">
-                            <?php if (!empty($enderecoErro)): ?>
-                                <span class="text-danger"><?php echo $enderecoErro; ?></span>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
                     <br/>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-warning">Atualizar</button>

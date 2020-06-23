@@ -35,7 +35,7 @@
 <br>
             <div class="row">
                 <p>
-                    <a href="ComponenteCreate.php" class="btn btn-success">Adicionar</a>
+                    <a href="createComponente.php" class="btn btn-success">Adicionar</a>
                     <a href="./../index.php" class="btn btn-success">Usuarios</a>
                     <a href="./../casa/casa.php" class="btn btn-success">Casas</a>
                 </p>
@@ -65,9 +65,9 @@
                             echo '<td width=250>';
                             echo '<a class="btn btn-primary" href="readComponente.php?comp_id='.$row['comp_id'].'">Info</a>';
                             echo ' ';
-                            echo '<a class="btn btn-warning" href="update.php?comp_id='.$row['comp_id'].'">Atualizar</a>';
+                            echo '<a class="btn btn-warning" href="updateComponente.php?comp_id='.$row['comp_id'].'">Atualizar</a>';
                             echo ' ';
-                            echo '<a class="btn btn-danger" href="delete.php?comp_id='.$row['comp_id'].'">Excluir</a>';
+                            echo '<a class="btn btn-danger" href="deleteComponente.php?comp_id='.$row['comp_id'].'">Excluir</a>';
                             echo '</td>';
                             echo '</tr>';
                         }

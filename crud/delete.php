@@ -3,19 +3,19 @@ require 'banco.php';
 
 $id = 0;
 
-if(!empty($_GET['id']))
+if(!empty($_GET['user_id']))
 {
-    $id = $_REQUEST['id'];
+    $id = $_REQUEST['user_id'];
 }
 
 if(!empty($_POST))
 {
-    $id = $_POST['id'];
+    $id = $_POST['user_id'];
 
     //Delete do banco:
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "DELETE FROM usuario where id = ?";
+    $sql = "DELETE FROM usuario where user_id = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     Banco::desconectar();
@@ -40,7 +40,7 @@ if(!empty($_POST))
                     <h3 class="well">Excluir Cliente</h3>
                 </div>
                 <form class="form-horizontal" action="delete.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $id;?>" />
+                    <input type="hidden" name="user_id" value="<?php echo $id;?>" />
                     <div class="alert alert-danger"> Deseja excluir o cliente?
                     </div>
                     <div class="form actions">

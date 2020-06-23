@@ -1,81 +1,90 @@
-
-
 <?php
-require 'banco.php';
-//Acompanha os erros de validação
 
-// Processar so quando tenha uma chamada post
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+require './../banco.php';
+
+$id = null;
+if (!empty($_GET['comp_id'])) {
+    $id = $_REQUEST['user_id'];
+}
+
+if (null == $id) {
+    header("Location: index.php");
+}
+
+if (!empty($_POST)) {
+
     $nomeErro = null;
-    $EmailErro = null;
-    $TelefoneErro = null;
+    $emailErro = null;
+    $telefoneErro = null;
     $deficienciaErro = null;
     $idadeErro = null;
-    $EnderecoErro = null;
+    $enderecoErro = null;
 
-    if (!empty($_POST)) {
-        $validacao = True;
-        $novoUsuario = False;
-        if (!empty($_POST['userName'])) {
-            $nome = $_POST['userName'];
-        } else {
-            $nomeErro = 'Por favor digite o seu nome!';
-            $validacao = False;
-        }
+    $nome = $_POST['userName'];
+    $email = $_POST['userEmail'];
+    $telefone = $_POST['userPhone'];
+    $tipo = $_POST['userType'];
+    $deficiencia = $_POST['userDeficiency'];
+    $idade = $_POST['userAge'];
+    $endereco = $_POST['userAddress'];
 
-        if (!empty($_POST['userEmail'])) {
-            $email = $_POST['userEmail'];
-            if (!filter_var($_POST['userEmail'], FILTER_VALIDATE_EMAIL)) {
-                $emailErro = 'Por favor digite um endereço de email válido!';
-                $validacao = False;
-            }
-        } else {
-            $emailErro = 'Por favor digite um endereço de email!';
-            $validacao = False;
-        }
+    //Validação
+ $validacao = true;
+ if (empty($nome)) {
+    $nomeErro = 'Por favor digite o nome!';
+    $validacao = false;
+ }
 
-        if (!empty($_POST['userPhone'])) {
-            $telefone = $_POST['userPhone'];
-        } else {
-            $TelefoneErro = 'Por favor digite o seu telefone!';
-            $validacao = False;
-        }
+ if (empty($email)) {
+     $emailErro = 'Por favor digite o endereço!';
+     $validacao = false;
+}
 
-        if (!empty($_POST['userDeficiency'])) {
-            $deficiencia = $_POST['userDeficiency'];
-        } else {
-            $deficienciaErro = 'Por favor digite a sua deficiencia ou coloque nenhuma';
-            $validacao = False;
-        }
+if (empty($telefone)) {
+       $telefoneErro = 'Por favor preenche o campo!';
+      $validacao = false;
+ }
+if (empty($deficiencia)) {
+    $deficienciaErro = 'Por favor preenche o campo!';
+   $validacao = false;
+}
+if (empty($idade)) {
+    $endereco = 'Por favor preenche o campo!';
+   $validacao = false;
+}
+if (empty($endereco)) {
+    $enderecoErro = 'Por favor preenche o campo!';
+   $validacao = false;
+}
 
-        if (!empty($_POST['userAge'])) {
-            $idade = $_POST['userAge'];
-        } else {
-            $idadeErro = 'Por favor digite a sua idade!';
-            $validacao = False;
-        }
 
-        if (!empty($_POST['userAddress'])) {
-            $endereco = $_POST['userAddress'];
-        } else {
-            $EnderecoErro = 'Por favor digite o seu endereço completo!';
-            $validacao = False;
-        }
-    }
-
-//Inserindo no Banco:
+    // update data
     if ($validacao) {
         $pdo = Banco::conectar();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO usuario (userName, userEmail, userPhone, userType, userDeficiency,userAge,userAddress) VALUES(?,?,?,?,?,?,?)";
+        $sql = "UPDATE usuario  set userName = ?, userEmail = ?, userPhone = ?, userType = ?, userDeficiency = ?, userAge = ?, userAddress = ? WHERE user_id = ?";
         $q = $pdo->prepare($sql);
-        $q->execute(array($nome, $email, $telefone, $tipo, $deficiencia, $idade, $endereco));
+        $q->execute(array($nome, $email, $telefone,$tipo,$deficiencia,$idade,$endereco, $id));
         Banco::desconectar();
         header("Location: index.php");
     }
+} else {
+    $pdo = Banco::conectar();
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $sql = "SELECT * FROM usuario where user_id = ?";
+    $q = $pdo->prepare($sql);
+    $q->execute(array($id));
+    $data = $q->fetch(PDO::FETCH_ASSOC);
+    $nome = $data['userName'];
+    $email = $data['userEmail'];
+    $telefone = $data['userPhone'];
+    $tipo = $data['userType'];
+    $deficiencia = $data['userDeficiency'];
+    $idade = $data['userAge'];
+    $endereco = $data['userAddress'];
+    Banco::desconectar();
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -84,20 +93,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="utf-8">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>Adicionar Contato</title>
+    <!-- using new bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Atualizar Contato</title>
 </head>
 
 <body>
 <div class="container">
-    <div clas="span10 offset1">
+
+    <div class="span10 offset1">
         <div class="card">
             <div class="card-header">
-                <h3 class="well"> Adicionar Contato </h3>
+                <h3 class="well"> Atualizar Contato </h3>
             </div>
             <div class="card-body">
-                <form class="form-horizontal" action="create.php" method="post">
+                <form class="form-horizontal" action="update.php?user_id=<?php echo $id ?>" method="post">
 
-                    <div class="control-group  <?php echo !empty($nomeErro) ? 'error ' : ''; ?>">
+                <div class="control-group  <?php  echo !empty($nomeErro) ? 'error ' : ''; ?>">
                         <label class="control-label">Nome</label>
                         <div class="controls">
                             <input size="50" class="form-control" name="userName" type="text" placeholder="Nome"
@@ -114,26 +128,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input size="40" class="form-control" name="userEmail" type="text" placeholder="Email"
                                    value="<?php echo !empty($email) ? $email : ''; ?>">
                             <?php if (!empty($emailErro)): ?>
-                                <span class="text-danger"><?php echo $emailErro; ?></span>
+                                <span class="text-danger"><?php echo $emailErro; ?></span> 
                             <?php endif; ?>
                         </div>
                     </div>
 
-                    <div class="control-group <?php !empty($TelefoneErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">telefone</label>
+                    <div class="control-group <? !empty($telefoneErro) ? 'error ' : ''; ?>">
+                        <label class="control-label">Telefone</label>
                         <div class="controls">
                             <input size="40" class="form-control" name="userPhone" type="text" placeholder="Telefone"
                                    value="<?php echo !empty($telefone) ? $telefone : ''; ?>">
-                            <?php if (!empty($TelefoneErro)): ?>
-                                <span class="text-danger"><?php echo $TelefoneErro; ?></span>
+                            <?php if (!empty($telefoneErro)): ?>
+                                <span class="text-danger"><?php echo $telefoneErro; ?></span> 
                             <?php endif; ?>
                         </div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label"></label>
+                    <div class="control-group <?php echo !empty($tipoErro) ? 'error ' : ''; ?>">
+                        <label class="control-label">tipo</label>
                         <div class="controls">
-                            <input size="35" class="form-control" name="userType" type="hidden" placeholder="Tipo" value="0">
+                            <input size="80" class="form-control" name="userType" type="number" placeholder="Tipo"
+                                   value="<?php echo !empty($tipo) ? $tipo : ''; ?>">
+                            <?php if (!empty($tipoErro)): ?>
+                                <span class="text-danger"><?php echo $tipoErro; ?></span> -->
+                            <?php endif; ?>
                         </div>
                     </div>
 
@@ -143,7 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input size="80" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
                                    value="<?php echo !empty($deficiencia) ? $deficiencia : ''; ?>">
                             <?php if (!empty($deficienciaErro)): ?>
-                                <span class="text-danger"><?php echo $deficienciaErro; ?></span>
+                                <span class="text-danger"><?php echo $deficienciaErro; ?></span> -->
                             <?php endif; ?>
                         </div>
                     </div>
@@ -154,35 +172,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <input size="40" class="form-control" name="userAge" type="number" placeholder="Idade"
                                    value="<?php echo !empty($idade) ? $idade : ''; ?>">
                             <?php if (!empty($idadeErro)): ?>
-                                <span class="text-danger"><?php echo $idadeErro; ?></span>
+                                <span class="text-danger"><?php echo $idadeErro; ?></span> 
                             <?php endif; ?>
                         </div>
                     </div>
 
-                    <div class="control-group <?php !empty($EnderecoErro) ? 'error ' : ''; ?>">
+                    <div class="control-group <?php !empty($enderecoErro) ? 'error ' : ''; ?>">
                         <label class="control-label">Endereço Completo</label>
                         <div class="controls">
                             <input size="40" class="form-control" name="userAddress" type="text" placeholder="Endereço"
                                    value="<?php echo !empty($endereco) ? $endereco : ''; ?>">
-                            <?php if (!empty($EnderecoErro)): ?>
-                                <span class="text-danger"><?php echo $EnderecoErro; ?></span>
+                            <?php if (!empty($enderecoErro)): ?>
+                                <span class="text-danger"><?php echo $enderecoErro; ?></span>
                             <?php endif; ?>
                         </div>
                     </div>
 
-                    
-
-                    
+                    <br/>
                     <div class="form-actions">
-                        <br/>
-                        <button type="submit" class="btn btn-success">Adicionar</button>
+                        <button type="submit" class="btn btn-warning">Atualizar</button>
                         <a href="index.php" type="btn" class="btn btn-default">Voltar</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
@@ -194,4 +208,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </body>
 
 </html>
-

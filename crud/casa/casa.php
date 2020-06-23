@@ -36,20 +36,15 @@
             <div class="row">
                 <p>
                     <a href="create.php" class="btn btn-success">Adicionar</a>
-                    <a href="componente/componente.php" class="btn btn-success">Componentes</a>
-                    <a href="casa/casa.php" class="btn btn-success">Casas</a>
+                    <a href="./../index.php" class="btn btn-success">Usuarios</a>
+                    <a href="./../componente/componente.php" class="btn btn-success">Componentes</a>
                 </p>
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Telefone</th>
-                            <th scope="col">Tipo</th>
-                            <th scope="col">Deficiencia</th>
-                            <th scope="col">Idade</th>
-                            <th scope="col">Endereço</th>
+                            <th scope="col">id</th>
+                            <th scope="col">user_id</th>
+                            <th scope="col">Descrição</th>
                             <th scope="col">Ação</th>
                         </tr>
                     </thead>
@@ -57,25 +52,20 @@
                         <?php
                         include 'banco.php';
                         $pdo = Banco::conectar();
-                        $sql = 'SELECT * FROM usuario ORDER BY user_id ASC';
+                        $sql = 'SELECT * FROM casa ORDER BY house_id ASC';
 
                         foreach($pdo->query($sql)as $row)
                         {
                             echo '<tr>';
-			                      echo '<th scope="row">'. $row['user_id'] . '</th>';
-                            echo '<td>'. $row['userName'] . '</td>';
-                            echo '<td>'. $row['userEmail'] . '</td>';
-                            echo '<td>'. $row['userPhone'] . '</td>';
-                            echo '<td>'. $row['userType'] . '</td>';
-                            echo '<td>'. $row['userDeficiency'] . '</td>';
-                            echo '<td>'. $row['userAge'] . '</td>';
-                            echo '<td>'. $row['userAddress'] . '</td>';
+			                      echo '<th scope="row">'. $row['house_id'] . '</th>';
+                                  echo '<td>'. $row['user_id'] . '</td>';
+                            echo '<td>'. $row['houseDescription'] . '</td>';
                             echo '<td width=250>';
-                            echo '<a class="btn btn-primary" href="read.php?user_id='.$row['user_id'].'">Info</a>';
+                            echo '<a class="btn btn-primary" href="read.php?house_id='.$row['house_id'].'">Info</a>';
                             echo ' ';
-                            echo '<a class="btn btn-warning" href="update.php?user_id='.$row['user_id'].'">Atualizar</a>';
+                            echo '<a class="btn btn-warning" href="update.php?house_id='.$row['house_id'].'">Atualizar</a>';
                             echo ' ';
-                            echo '<a class="btn btn-danger" href="delete.php?user_id='.$row['user_id'].'">Excluir</a>';
+                            echo '<a class="btn btn-danger" href="delete.php?house_id='.$row['house_id'].'">Excluir</a>';
                             echo '</td>';
                             echo '</tr>';
                         }

@@ -1,8 +1,8 @@
 <?php
 require 'banco.php';
 $id = null;
-if (!empty($_GET['id'])) {
-    $id = $_REQUEST['id'];
+if (!empty($_GET['user_id'])) {
+    $id = $_REQUEST['user_id'];
 }
 
 if (null == $id) {
@@ -10,7 +10,7 @@ if (null == $id) {
 } else {
     $pdo = Banco::conectar();
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "SELECT * FROM usuario where id = ?";
+    $sql = "SELECT * FROM usuario where user_id = ?";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -41,7 +41,25 @@ if (null == $id) {
                         <label class="control-label">Nome</label>
                         <div class="controls form-control">
                             <label class="carousel-inner">
-                                <?php echo $data['USER_NOME']; ?>
+                                <?php echo $data['userName']; ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Email</label>
+                        <div class="controls form-control disabled">
+                            <label class="carousel-inner">
+                                <?php echo $data['userEmail']; ?>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label class="control-label">Telefone</label>
+                        <div class="controls form-control disabled">
+                            <label class="carousel-inner">
+                                <?php echo $data['userPhone']; ?>
                             </label>
                         </div>
                     </div>
@@ -50,16 +68,21 @@ if (null == $id) {
                         <label class="control-label">Tipo</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['USER_TIPO']; ?>
+                                <?php if($data['userType']==0 || $data['userType']==null ){
+                                    echo 'Usuário Comum';
+                                } else{
+                                    echo 'Administrador';
+                                } 
+                                 ?>
                             </label>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Deficiência</label>
+                        <label class="control-label">Deficiencia</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['USER_DEFICIENCIA']; ?>
+                                <?php echo $data['userDeficiency']; ?>
                             </label>
                         </div>
                     </div>
@@ -68,43 +91,16 @@ if (null == $id) {
                         <label class="control-label">Idade</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['USER_IDADE']; ?>
+                                <?php echo $data['userAge']; ?>
                             </label>
                         </div>
                     </div>
 
                     <div class="control-group">
-                        <label class="control-label">Rua</label>
+                        <label class="control-label">Endereço</label>
                         <div class="controls form-control disabled">
                             <label class="carousel-inner">
-                                <?php echo $data['RUA']; ?>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Bairro</label>
-                        <div class="controls form-control disabled">
-                            <label class="carousel-inner">
-                                <?php echo $data['BAIRRO']; ?>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">Cidade</label>
-                        <div class="controls form-control disabled">
-                            <label class="carousel-inner">
-                                <?php echo $data['CIDADE']; ?>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="control-group">
-                        <label class="control-label">UF</label>
-                        <div class="controls form-control disabled">
-                            <label class="carousel-inner">
-                                <?php echo $data['UF']; ?>
+                                <?php echo $data['userAddress']; ?>
                             </label>
                         </div>
                     </div>

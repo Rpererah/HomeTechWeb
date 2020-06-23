@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 20-Jun-2020 às 01:54
+-- Tempo de geração: 23-Jun-2020 às 04:15
 -- Versão do servidor: 10.4.10-MariaDB
 -- versão do PHP: 7.3.12
 
@@ -30,14 +30,19 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `casa`;
 CREATE TABLE IF NOT EXISTS `casa` (
-  `CASA_ID` int(11) NOT NULL AUTO_INCREMENT,
-  `CASA_DESCRICAO` varchar(255) DEFAULT NULL,
-  `LONGITUDE` varchar(45) DEFAULT NULL,
-  `LATITUDE` varchar(45) DEFAULT NULL,
-  `USER_ID` int(11) NOT NULL,
-  PRIMARY KEY (`CASA_ID`),
-  KEY `fk_USER_ID` (`USER_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `house_id` int(11) NOT NULL AUTO_INCREMENT,
+  `houseDescription` varchar(255) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`house_id`),
+  KEY `fk_USER_ID` (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `casa`
+--
+
+INSERT INTO `casa` (`house_id`, `houseDescription`, `user_id`) VALUES
+(1, 'apartamento', 17);
 
 -- --------------------------------------------------------
 
@@ -47,16 +52,20 @@ CREATE TABLE IF NOT EXISTS `casa` (
 
 DROP TABLE IF EXISTS `componente`;
 CREATE TABLE IF NOT EXISTS `componente` (
-  `COMP_ID` int(11) NOT NULL,
-  `COMP_DESCRICAO` varchar(255) DEFAULT NULL,
-  `COMP_VALOR` decimal(3,2) DEFAULT NULL,
-  `COMP_DATA_INST` datetime DEFAULT NULL,
-  `COMP_NOME` varchar(255) NOT NULL,
-  `COMP_DATA_GARANTIA` datetime DEFAULT NULL,
-  `CASA_ID` int(11) NOT NULL,
-  PRIMARY KEY (`COMP_ID`),
-  KEY `fk_CASA_ID` (`CASA_ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `comp_id` int(11) NOT NULL AUTO_INCREMENT,
+  `compDescription` varchar(255) DEFAULT NULL,
+  `compName` varchar(255) NOT NULL,
+  `house_id` int(11) NOT NULL,
+  PRIMARY KEY (`comp_id`),
+  KEY `fk_CASA_ID` (`house_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `componente`
+--
+
+INSERT INTO `componente` (`comp_id`, `compDescription`, `compName`, `house_id`) VALUES
+(1, 'placa controladora', 'arduino', 1);
 
 -- --------------------------------------------------------
 
@@ -66,32 +75,24 @@ CREATE TABLE IF NOT EXISTS `componente` (
 
 DROP TABLE IF EXISTS `usuario`;
 CREATE TABLE IF NOT EXISTS `usuario` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `USER_NOME` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `USER_TIPO` char(1) CHARACTER SET latin1 COLLATE latin1_bin NOT NULL DEFAULT '0',
-  `USER_DEFICIENCIA` varchar(30) CHARACTER SET latin1 DEFAULT NULL,
-  `USER_IDADE` decimal(10,0) DEFAULT NULL,
-  `RUA` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
-  `BAIRRO` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
-  `CIDADE` varchar(100) CHARACTER SET latin1 DEFAULT NULL,
-  `UF` char(2) CHARACTER SET latin1 DEFAULT NULL,
-  `USER_SENHA` varchar(255) CHARACTER SET latin1 DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `userName` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `userEmail` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `userPhone` varchar(14) COLLATE latin1_general_ci NOT NULL,
+  `userType` char(1) CHARACTER SET latin1 COLLATE latin1_bin DEFAULT NULL,
+  `userDeficiency` varchar(30) CHARACTER SET latin1 DEFAULT NULL,
+  `userAge` varchar(3) COLLATE latin1_general_ci DEFAULT NULL,
+  `userAddress` varchar(500) COLLATE latin1_general_ci DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id`, `USER_NOME`, `USER_TIPO`, `USER_DEFICIENCIA`, `USER_IDADE`, `RUA`, `BAIRRO`, `CIDADE`, `UF`, `USER_SENHA`) VALUES
-(1, 'Pedro', '1', NULL, '17', NULL, NULL, NULL, NULL, '123'),
-(2, 'pedro', '0', NULL, NULL, NULL, NULL, NULL, NULL, '123'),
-(3, 'Testezinho ', '0', 'Auditiva', '34', 'Palmeiras', 'Valle', 'Indaia', 'SP', '123'),
-(4, 'admin', '1', NULL, '28', 'Bandeirantes', 'Maracuja', 'Indaiatuba', 'SP', 'admin'),
-(5, 'Rafa', '0', NULL, NULL, NULL, NULL, NULL, NULL, 'rafael'),
-(6, 'jorgin', '1', 'nenhuma', '22', 'Matuto', 'Mooca', 'SÃ£o Paulo', 'SP', NULL),
-(7, 'Matheus', '', 'nenhuma', '14', 'asdasdad', 'sadasd', 'asdaf', 'RS', NULL),
-(11, 'cdsf', '1', 'VISAO', '23', 'epa', 'Lauro bueno', 'Indaiatuba', 'SP', NULL);
+INSERT INTO `usuario` (`user_id`, `userName`, `userEmail`, `userPhone`, `userType`, `userDeficiency`, `userAge`, `userAddress`) VALUES
+(17, 'Fillipe', 'rpererah@gmail.com', '11975720443', '1', 'nenhuma', '43', 'Rua Dona Tecla 746'),
+(16, 'lokao', 'rpererah@gmail.com', '+5519981858526', '0', 'nenhuma', '43', 'Rua Valdir Afonso 69');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

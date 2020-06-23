@@ -14,10 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $validacao = True;
         $novoUsuario = False;
 
+        if (!empty($_POST['user_id'])) {
+            $user_id = $_POST['user_id'];
+        } else {
+            $descricaoErro = 'Por favor digite um id válido';
+            $validacao = False;
+        }
+
         if (!empty($_POST['houseDescription'])) {
             $descricao = $_POST['houseDescription'];
         } else {
-            $deficienciaErro = 'Por favor digite uma descrição';
+            $descricaoErro = 'Por favor digite uma descrição';
             $validacao = False;
         }
        
@@ -27,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($validacao) {
         $pdo = Banco::conectar();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "INSERT INTO casa (house_id, user_id, houseDescription) VALUES(?,?,?)";
+        $sql = "INSERT INTO casa (user_id, houseDescription) VALUES(?,?)";
         $q = $pdo->prepare($sql);
-        $q->execute(array($house_idErro, $user_idErro, $descricao));
+        $q->execute(array($user_id, $descricao));
         Banco::desconectar();
         header("Location: casa.php");
     }
@@ -56,17 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
             <div class="card-body">
                 <form class="form-horizontal" action="casaCreate.php" method="post">
-
-                    <div class="control-group  <?php echo !empty($house_idErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">house_id</label>
-                        <div class="controls">
-                            <input size="50" class="form-control" name="house_id" type="text" placeholder="house_id"
-                                   value="<?php echo !empty($house_id) ? $house_id : ''; ?>">
-                            <?php if (!empty($house_idErro)): ?>
-                                <span class="text-danger"><?php echo $house_idErro; ?></span>
-                            <?php endif; ?>
-                        </div>
-                    </div>
 
                     <div class="control-group  <?php echo !empty($user_idErro) ? 'error ' : ''; ?>">
                         <label class="control-label">user_id</label>

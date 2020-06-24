@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
 
                     <div class="control-group <?php !empty($TelefoneErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">telefone</label>
+                        <label class="control-label">Telefone</label>
                         <div class="controls">
                             <input size="40" class="form-control" name="userPhone" type="text" placeholder="Telefone"
                                    value="<?php echo !empty($telefone) ? $telefone : ''; ?>">
@@ -140,8 +140,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="control-group <?php echo !empty($deficienciaErro) ? 'error ' : ''; ?>">
                         <label class="control-label">Deficiência</label>
                         <div class="controls">
-                            <input size="80" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
+                        <select id="deficiencia" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
                                    value="<?php echo !empty($deficiencia) ? $deficiencia : ''; ?>">
+                            <option value="nenhuma">Nenhuma</option>
+                            <option value="auditiva">Auditiva</option>
+                            <option value="visual">Visual</option>
+                            <option value="outra">Outra</option>
+                        </select>
                             <?php if (!empty($deficienciaErro)): ?>
                                 <span class="text-danger"><?php echo $deficienciaErro; ?></span>
                             <?php endif; ?>

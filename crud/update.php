@@ -145,10 +145,19 @@ if (empty($endereco)) {
                     </div>
 
                     <div class="control-group <?php echo !empty($tipoErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">tipo</label>
+                        <label class="control-label">Tipo</label>
                         <div class="controls">
-                            <input size="80" class="form-control" name="userType" type="number" placeholder="Tipo"
+                        <select id="tipo" class="form-control" name="userType" type="text" placeholder="Tipo"
                                    value="<?php echo !empty($tipo) ? $tipo : ''; ?>">
+                                   <?php if($data['userType']==0 || $data['userType']==null ){
+                                    echo '<option value="0">Usuário Comum</option>
+                                          <option value="1">Administrador</option>';
+                                } else{
+                                    echo '<option value="1">Administrador</option>
+                                          <option value="0">Usuário Comum</option>';
+                                } 
+                                 ?>
+                        </select>
                             <?php if (!empty($tipoErro)): ?>
                                 <span class="text-danger"><?php echo $tipoErro; ?></span> -->
                             <?php endif; ?>
@@ -158,10 +167,15 @@ if (empty($endereco)) {
                     <div class="control-group <?php echo !empty($deficienciaErro) ? 'error ' : ''; ?>">
                         <label class="control-label">Deficiência</label>
                         <div class="controls">
-                            <input size="80" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
+                        <select id="deficiencia" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
                                    value="<?php echo !empty($deficiencia) ? $deficiencia : ''; ?>">
+                            <option value="nenhuma">Nenhuma</option>
+                            <option value="auditiva">Auditiva</option>
+                            <option value="visual">Visual</option>
+                            <option value="outra">Outra</option>
+                        </select>
                             <?php if (!empty($deficienciaErro)): ?>
-                                <span class="text-danger"><?php echo $deficienciaErro; ?></span> -->
+                                <span class="text-danger"><?php echo $deficienciaErro; ?></span>
                             <?php endif; ?>
                         </div>
                     </div>

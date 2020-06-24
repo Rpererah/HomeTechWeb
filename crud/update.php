@@ -169,10 +169,28 @@ if (empty($endereco)) {
                         <div class="controls">
                         <select id="deficiencia" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
                                    value="<?php echo !empty($deficiencia) ? $deficiencia : ''; ?>">
-                            <option value="nenhuma">Nenhuma</option>
-                            <option value="auditiva">Auditiva</option>
-                            <option value="visual">Visual</option>
-                            <option value="outra">Outra</option>
+                                   <?php if($data['userDeficiency']=='nenhuma'){
+                                    echo '<option value="nenhuma">Nenhuma</option>
+                                          <option value="auditiva">Auditiva</option>
+                                          <option value="visual">Visual</option>
+                                          <option value="outra">Outra</option>';
+                                } elseif($data['userDeficiency']=='auditiva'){
+                                    echo '<option value="auditiva">Auditiva</option>
+                                          <option value="nenhuma">Nenhuma</option>
+                                          <option value="visual">Visual</option>
+                                          <option value="outra">Outra</option>';
+                                } elseif($data['userDeficiency']=='visual'){
+                                    echo '<option value="visual">Visual</option>
+                                          <option value="nenhuma">Nenhuma</option>
+                                          <option value="auditiva">Auditiva</option>
+                                          <option value="outra">Outra</option>';
+                                } elseif($data['userDeficiency']=='outra'){
+                                    echo '<option value="outra">Outra</option>
+                                          <option value="visual">Visual</option>
+                                          <option value="auditiva">Auditiva</option>
+                                          <option value="nenhuma">Nenhuma</option>';
+                                }
+                                 ?>
                         </select>
                             <?php if (!empty($deficienciaErro)): ?>
                                 <span class="text-danger"><?php echo $deficienciaErro; ?></span>

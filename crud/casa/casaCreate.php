@@ -1,7 +1,7 @@
-
-
 <?php
 require './../banco.php';
+$pdo = Banco::conectar();
+$sql = 'SELECT * FROM usuario ORDER BY user_id ASC';
 //Acompanha os erros de validação
 
 // Processar so quando tenha uma chamada post
@@ -64,10 +64,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form class="form-horizontal" action="casaCreate.php" method="post">
 
                     <div class="control-group  <?php echo !empty($user_idErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">user_id</label>
+                        <label class="control-label">Id do Usuário</label>
                         <div class="controls">
-                            <input size="50" class="form-control" name="user_id" type="text" placeholder="user_id"
-                                   value="<?php echo !empty($user_id) ? $user_id : ''; ?>">
+                        <select class="form-control" name="user_id" type="text" placeholder="User ID"
+                            value="<?php echo !empty($user_id) ? $user_id : ''; ?>">
+                                <?php  
+                                 foreach($pdo->query($sql)as $row){
+                                 echo '<option value="'.$row['user_id'].'">'.$row['user_id'].' - '. $row['userName'].'</option>';
+                                 }
+                                ?>
+                        </select>
                             <?php if (!empty($user_idErro)): ?>
                                 <span class="text-danger"><?php echo $user_idErro; ?></span>
                             <?php endif; ?>
@@ -96,14 +102,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="./../assets/js/bootstrap.min.js"></script>
-</body>
 
-</html>
-
+<?php include_once("./../partials/footer.php"); ?>

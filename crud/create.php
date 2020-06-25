@@ -1,5 +1,3 @@
-
-
 <?php
 require 'banco.php';
 //Acompanha os erros de validação
@@ -76,7 +74,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -142,10 +139,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <div class="controls">
                         <select id="deficiencia" class="form-control" name="userDeficiency" type="text" placeholder="Deficiência"
                                    value="<?php echo !empty($deficiencia) ? $deficiencia : ''; ?>">
-                            <option value="nenhuma">Nenhuma</option>
-                            <option value="auditiva">Auditiva</option>
-                            <option value="visual">Visual</option>
-                            <option value="outra">Outra</option>
+                            <option value="Nenhuma">Nenhuma</option>
+                            <option value="Auditiva">Auditiva</option>
+                            <option value="Visual">Visual</option>
+                            <option value="Outra">Outra</option>
                         </select>
                             <?php if (!empty($deficienciaErro)): ?>
                                 <span class="text-danger"><?php echo $deficienciaErro; ?></span>

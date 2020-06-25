@@ -1,7 +1,10 @@
-
-
 <?php
 require './../banco.php';
+$pdo = Banco::conectar();
+$sql = 'SELECT * FROM usuario ORDER BY user_id ASC';
+
+
+
 //Acompanha os erros de validação
 
 // Processar so quando tenha uma chamada post
@@ -68,10 +71,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <form class="form-horizontal" action="createComponente.php" method="post">
 
                     <div class="control-group  <?php echo !empty($nomeErro) ? 'error ' : ''; ?>">
-                        <label class="control-label">Nome</label>
+                        <label class="control-label">Nome do Componente</label>
                         <div class="controls">
-                            <input size="50" class="form-control" name="compName" type="text" placeholder="Nome"
+                        <select id="compName" class="form-control" name="compName" type="text" placeholder="compName"
                                    value="<?php echo !empty($nome) ? $nome : ''; ?>">
+                            <option value="Arduino">Arduino</option>
+                            <option value="LED">LED</option>
+                            <option value="Lâmpada">Lâmpada</option>
+                            <option value="SmartTomada">SmartTomada</option>
+                        </select>
                             <?php if (!empty($nomeErro)): ?>
                                 <span class="text-danger"><?php echo $nomeErro; ?></span>
                             <?php endif; ?>
@@ -92,11 +100,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="control-group <?php !empty($houseErro) ? 'error ' : ''; ?>">
                         <label class="control-label">House ID</label>
                         <div class="controls">
-                            <input size="40" class="form-control" name="house_id" type="text" placeholder="House ID"
+                            <select class="form-control" name="house_id" type="text" placeholder="House ID"
                                    value="<?php echo !empty($house) ? $house : ''; ?>">
+                                   <?php  
+                                    foreach($pdo->query($sql)as $row){
+                                    echo '<option value="'.$row['user_id'].'">'.$row['user_id'].' - '. $row['userName'].'</option>';
+                                    }
+                                   ?>
+                            </select>
                             <?php if (!empty($houseErro)): ?>
                                 <span class="text-danger"><?php echo $houseErro; ?></span>
                             <?php endif; ?>
+                            
                         </div>
                     </div>
                    
@@ -111,14 +126,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="./../assets/js/bootstrap.min.js"></script>
-</body>
 
-</html>
-
+<?php include_once("./../partials/footer.php"); ?>

@@ -58,7 +58,7 @@
         <div class="row align-items-center justify-content-center">
 
           <div class="col-4">
-            <a href="index.php"><img src="images/LHT.png" height="108px" width="177px" alt=""></a></h1>
+            <a href="#home-section"><img src="images/LHT.png" height="108px" width="177px" alt=""></a></h1>
           </div>
 
           <div class="col-8">

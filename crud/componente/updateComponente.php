@@ -83,8 +83,31 @@ if (!empty($_POST)) {
                 <div class="control-group  <?php  echo !empty($nomeErro) ? 'error ' : ''; ?>">
                         <label class="control-label">Nome</label>
                         <div class="controls">
-                            <input size="50" class="form-control" name="compName" type="text" placeholder="Nome"
+                        <select id="compName" class="form-control" name="compName" type="text" placeholder="compName"
                                    value="<?php echo !empty($nome) ? $nome : ''; ?>">
+                                   <?php if($data['compName']=='Arduino' || $data['compName']=='arduino'){
+                                    echo '<option selected value="Arduino">Arduino</option>
+                                          <option value="LED">LED</option>
+                                          <option value="Lâmpada">Lâmpada</option>
+                                          <option value="SmartTomada">SmartTomada</option>';
+                                } elseif($data['compName']=='LED'){
+                                    echo '<option value="Arduino">Arduino</option>
+                                          <option selected value="LED">LED</option>
+                                          <option value="Lâmpada">Lâmpada</option>
+                                          <option value="SmartTomada">SmartTomada</option>';
+                                } elseif($data['compName']=='Lâmpada'){
+                                    echo '<option value="Arduino">Arduino</option>
+                                          <option value="LED">LED</option>
+                                          <option selected value="Lâmpada">Lâmpada</option>
+                                          <option value="SmartTomada">SmartTomada</option>';
+                                } elseif($data['compName']=='SmartTomada'){
+                                    echo '<option value="Arduino">Arduino</option>
+                                          <option value="LED">LED</option>
+                                          <option value="Lâmpada">Lâmpada</option>
+                                          <option selected value="SmartTomada">SmartTomada</option>';
+                                }
+                                 ?>
+                        </select>
                             <?php if (!empty($nomeErro)): ?>
                                 <span class="text-danger"><?php echo $nomeErro; ?></span>
                             <?php endif; ?>
@@ -104,20 +127,12 @@ if (!empty($_POST)) {
                     <br/>
                     <div class="form-actions">
                         <button type="submit" class="btn btn-warning">Atualizar</button>
-                        <a href="index.php" type="btn" class="btn btn-default">Voltar</a>
+                        <a href="componente.php" type="btn" class="btn btn-default">Voltar</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<!-- Latest compiled and minified JavaScript -->
-<script src="assets/js/bootstrap.min.js"></script>
-</body>
 
-</html>
+<?php include_once("./../partials/footer.php"); ?>

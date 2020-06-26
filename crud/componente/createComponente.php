@@ -1,7 +1,7 @@
 <?php
 require './../banco.php';
-$pdo = Banco::conectar();
-$sql = 'SELECT * FROM usuario ORDER BY user_id ASC';
+$conexao = Banco::conectar();
+$select = 'SELECT * FROM usuario ORDER BY user_id ASC';
 
 
 
@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <select class="form-control" name="house_id" type="text" placeholder="House ID"
                                    value="<?php echo !empty($house) ? $house : ''; ?>">
                                    <?php  
-                                    foreach($pdo->query($sql)as $row){
+                                    foreach($conexao->query($select)as $row){
                                     echo '<option value="'.$row['user_id'].'">'.$row['user_id'].' - '. $row['userName'].'</option>';
                                     }
                                    ?>

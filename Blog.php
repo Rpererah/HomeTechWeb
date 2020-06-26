@@ -6,7 +6,7 @@
             <h2 class="section-title text-center mb-5">Nosso Blog</h2>
           </div>
 
-          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="blog_entry">
               <a href="single.html"><img src="images/post3.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4 bg-white">
@@ -18,7 +18,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="blog_entry">
               <a href="single.html"><img src="images/post1.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4 bg-white">
@@ -30,7 +30,7 @@
             </div>
           </div>
 
-          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4">
+          <div class="col-md-6 mb-5 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="blog_entry">
               <a href="single.html"><img src="images/post2.jpg" alt="Image" class="img-fluid"></a>
               <div class="p-4 bg-white">

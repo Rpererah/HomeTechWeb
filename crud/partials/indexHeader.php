@@ -10,7 +10,7 @@
 
     <title>Painel Administrativo</title>
 
-    <link rel="shortcut icon" href="./../../fonts/favicon/round_perm_identity_white_48dp.png" >
+    <link rel="shortcut icon" href="HomeTechWeb/fonts/favicon/round_perm_identity_white_48dp.png" >
 </head>
 
 <body>

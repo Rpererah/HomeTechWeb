@@ -27,7 +27,7 @@
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="shortcut icon" href="./fonts/favicon/icon.ico" >
+    <link rel="shortcut icon" href="images/icone3.png" >
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -58,7 +58,9 @@
         <div class="row align-items-center justify-content-center">
 
           <div class="col-4">
+          <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
             <a href="#home-section"><img src="images/LHT.png" height="108px" width="177px" alt=""></a></h1>
+            </ul>
           </div>
 
           <div class="col-8">

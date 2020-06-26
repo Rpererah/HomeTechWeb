@@ -1,10 +1,6 @@
 <?php
-    include_once("header.php");
-    include_once("Sobre.php");
-    include_once("Portfolio.php");
-    include_once("Servicos.php");
-    include_once("Depoimentos.php");
+    include_once("partials/header.php");
     include_once("blog.php");
-    include_once("contato.php");
-    include_once("footer.php");
+    include_once("Sobre.php");
+    include_once("partials/footer.php");
     ?>

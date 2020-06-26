@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="BR">
   <head>
     <title>HomeTech</title>
     <meta charset="utf-8">
@@ -66,12 +66,9 @@
           <div class="col-8">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Inicio</a></li>
-                <li><a href="#about-section" class="nav-link">Sobre Nós</a></li>
-                <li><a href="#projects-section" class="nav-link">Projeto</a></li>
-                <li><a href="#services-section" class="nav-link">Serviços</a></li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
-                <li><a href="#contact-section" class="nav-link">Contato</a></li>
+                <li><a href="index.php" class="nav-link">Inicio</a></li>
+                <li><a href="servicosEportifolio.php" class="nav-link">Serviços</a></li>
+                <li><a href="contatoseprecos.php" class="nav-link">Contato</a></li>
                 <li><a href="crud/index.php" class="nav-link">Administrador</a></li>
               </ul>
             </nav>
@@ -98,7 +95,7 @@
               <div class="col-lg-8">
                 <h1 class="text-white" data-aos="fade-up" data-aos-delay="">Automatize o que desejar</h1>
                 <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">Tornando-se acessivel cada dia mais</p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="#services-section" class="btn smoothscroll btn-primary">Conheça nossos serviços</a></p>
+                <p data-aos="fade-up" data-aos-delay="200"><a href="#blog-section" class="btn smoothscroll btn-primary">Confira nossas notícias</a></p>
 
               </div>
             </div>

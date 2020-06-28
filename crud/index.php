@@ -53,8 +53,7 @@
                             echo '<td>'. $row['userAge'] . '</td>';
                             echo '<td>'. $row['userAddress'] . '</td>';
                             echo '<td width=250>';
-                            echo '<a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" href="read.php?user_id='.$row['user_id'].'">Info</a>
-                            <?php include_once("modal.php"); ?>';
+                            echo '<a class="btn btn-primary" href="read.php?user_id='.$row['user_id'].'">Info</a>';
                             echo ' ';
                             echo '<a class="btn btn-warning" href="update.php?user_id='.$row['user_id'].'">Atualizar</a>';
                             echo ' ';
@@ -64,7 +63,6 @@
                         }
                         Banco::desconectar();
                         ?>
-                        <?php include_once("modal.php"); ?>
                     </tbody>
                 </table>
             </div>

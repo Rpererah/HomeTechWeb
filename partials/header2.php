@@ -94,7 +94,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <h1 class="text-white" data-aos="fade-up" data-aos-delay="">Entre em contato conosco</h1>
-                <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">a um toque de distancia</p>
+                <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">a um toque de distância</p>
                 <p data-aos="fade-up" data-aos-delay="200"><a href="#contact-section" class="btn smoothscroll btn-primary">Clique aqui</a></p>
 
               </div>

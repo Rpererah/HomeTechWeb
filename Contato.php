@@ -9,31 +9,28 @@
         </div>
         <div class="row justify-content-between">
           <div class="col-lg-6">
-            <form action="#" class="form">
+            <form action="enviar.php" method="post" class="form">
               <div class="row mb-4">
-                <div class="form-group col-6">
-                  <input type="text" class="form-control" placeholder="Nome">
-                </div>
-                <div class="form-group col-6">
-                  <input type="text" class="form-control" placeholder="Sobrenome">
+                <div class="form-group col-12">
+                  <input type="text" id="nome" name='nome' class="form-control" placeholder="Nome Completo">
                 </div>
               </div>
 
               <div class="row mb-4">
                 <div class="form-group col-12">
-                  <input type="email" class="form-control" placeholder="Endereço de Email">
+                  <input type="email" id="email" name="email" class="form-control" placeholder="Endereço de Email">
                 </div>
               </div>
 
               <div class="row mb-4">
                 <div class="form-group col-12">
-                  <input type="text" class="form-control" placeholder="Assunto">
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="Assunto">
                 </div>
               </div>
 
               <div class="row mb-4">
                 <div class="form-group col-12">
-                  <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Escreva sua mensagem aqui"></textarea>
+                  <textarea id="message" name="message" cols="30" rows="10" class="form-control" placeholder="Escreva sua mensagem aqui"></textarea>
                 </div>
               </div>
 

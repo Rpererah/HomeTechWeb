@@ -8,20 +8,21 @@
         <div class="owl-carousel slide-one-item">
           <div class="slide">
             <blockquote>
-              <p>Tô deixando aqui livre pro Rafael brincar. aaaaaaaaaa</p>
-              <p><cite>&mdash; Pedro</cite></p>
+              <p>
+Eu acho que a ideia de inclusão de PcDs engloba as pessoas de uma forma que além de ser interessante, também é muito nobre</p>
+              <p><cite>&mdash; Davi Corazza</cite></p>
             </blockquote>
           </div>
           <div class="slide">
             <blockquote>
-              <p>Tô deixando aqui livre pro Rafael brincar. bbbbbbbbbbbbbbb</p>
-              <p><cite>&mdash; Pedrinho</cite></p>
+              <p>Acredito que a hometech tenha um grande papel perante a sociedade, uma vez que cria funcionalidades cabíveis para todos os tipos de deficiências.</p>
+              <p><cite>&mdash; Crystopher Beling</cite></p>
             </blockquote>
           </div>
           <div class="slide">
             <blockquote>
-              <p>Tô deixando aqui livre pro Rafael brincar. cccccccccccccccccccc</p>
-              <p><cite>&mdash; Davizen</cite></p>
+              <p>Eu ajudei na criação da ideia e adorei que deu resultado</p>
+              <p><cite>&mdash; Ana Maria Picolomini</cite></p>
             </blockquote>
           </div>
         </div>

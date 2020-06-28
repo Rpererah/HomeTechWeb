@@ -10,7 +10,7 @@
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
               <div class="svg-icon">
-                <img src="images/flaticon/svg/002-travel-1.svg" alt="Image" class="img-fluid">
+                <img src="images/flaticon/svg/003-travel-2.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
                 <h3>Consultoria a domicílio</h3>
@@ -34,7 +34,7 @@
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
               <div class="svg-icon">
-                <img src="images/flaticon/svg/003-travel-2.svg" alt="Image" class="img-fluid">
+                <img src="images/download.png" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
                 <h3>Suporte contínuo</h3>
@@ -46,7 +46,7 @@
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
               <div class="svg-icon">
-                <img src="images/flaticon/svg/004-travel-3.svg" alt="Image" class="img-fluid">
+                <img src="images/1196054.png" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
                 <h3>Suporte à pessoas com deficiência</h3>
@@ -58,7 +58,7 @@
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
               <div class="svg-icon">
-                <img src="images/flaticon/svg/005-travel-4.svg" alt="Image" class="img-fluid">
+                <img src="images/flaticon/svg/002-travel-1.svg" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
                 <h3>Total Controle pelo celular</h3>
@@ -70,7 +70,7 @@
           <div class="col-md-6 mb-4">
             <div class="service d-flex h-100">
               <div class="svg-icon">
-                <img src="images/flaticon/svg/006-food.svg" alt="Image" class="img-fluid">
+                <img src="images/1508843.png" alt="Image" class="img-fluid">
               </div>
               <div class="service-about">
                 <h3>Web Design / Development</h3>

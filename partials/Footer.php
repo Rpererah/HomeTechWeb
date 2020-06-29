@@ -26,21 +26,18 @@
          </div>
 
         <div class="col-lg-6">
-            <h2 class="footer-title mb-6">Se Inscreva</h2>
-            <form action="#" method="post" class="footer-subscribe">
-              <div class="input-group mb-6">
-                <input type="text" class="form-control border-secondary text-black bg-transparent" placeholder="Email" aria-label="Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-secondary" type="button" id="button-addon2">Enviar</button>
+            <h2 class="footer-title mb-6">HomeTech</h2>
+            <h6>"Automatize o simples, simplifique o fácil"</h3>
                 </div>
               </div>
-            </form>
           </div>
         
 
         <div class="row">
           <div class="col-12 text-center">
             <p>
+            <br>
+            <br>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;
                 <script>

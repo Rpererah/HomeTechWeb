@@ -11,5 +11,7 @@ if(isset($_GET['eSend'])){
 <?php
 include_once("partials/header2.php");
 include_once("contato.php");
+include_once("equipe.php");
+include_once("precos.php");
 include_once("partials/Footer.php");
 ?>

@@ -1,5 +1,16 @@
 {
+    "name": "rafae/home-tech-web",
+    "description": "Portal em php",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "AutoGuResRaPeJu",
+            "email": "rpererah@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
     "require": {
-        "phpmailer/phpmailer": "^6.1"
+        "kreait/firebase-php": "5.0"
     }
 }

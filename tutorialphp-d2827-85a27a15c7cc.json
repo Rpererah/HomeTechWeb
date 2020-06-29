@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tutorialphp-d2827",
+  "private_key_id": "85a27a15c7cc5cdf67a46e40e4b6b89c64465030",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDOj2G0xIxr/NXW\nvpBLjRXeIy8NlVpjnbOv5qCimSQN59FGNu7ibMPShv//6EgTbcDjL2MP7nJRB3jd\nNi9fcApS0pQJEfxZ/2pLEA04CgMZVXSeRJgQPHMB/wCUw77wsbtB5tVBraGyJQqZ\nPoKxW9fX+dJh2xDiTB4YQ3qDI05MonwjUKnT1IcQCHqYMQrIcmCUAHE2Mq96ezfy\nqNPXk3/ZUDFplBvA4XIntgFh+x58/jT0qRU77TeveXVNDAINJpwOevlG2GbbvyBF\niGatgqndMHxQ+/3Suaao0ROZ9yNMwQ9KQhteu8Tg3n9qZ+ii1qtk2xXwJhVBUwzl\nWubHSABpAgMBAAECggEAChZddqb8lo933+9Ze58NuNXuB9NJ4UCD1GzGXnptFNLD\n2RJ4sw0NuRvHp7cvwecjutSHGXGTGprrT55ETPxbPLU07oZ21OxQxA6qHpj6ksOm\nGM6PwIc7NJc/74PpsLZ1RyAfPQBeO6VscZRobIHoNg9os0ev+OUvuQ6ejoXsXnig\nY7ZOoYz7aPyOWfIoqyPW8uS/xX2IWntkj4iBjBmZ081BGPMr+eoqM6U5zp6J/w03\ni5fJOWAp+Xnv1nEesz/rV6h+QzGhRScUri/9CSmzii0282PT3Rho0Pv/p5mqRUCy\n2UujPhUmbAawlXRsGJu/GuYiA1gSppYd+9/c4qbu6wKBgQD3FlBTumBrCPgKcxOm\nBOR7vX0bbPzFR+pwqS3TuKK9q4iPecIwb/e59Bm9qHiYGNm3RaKwIjW7f9DNKhmt\nMvjX+B9i/oWoEhhOdM06FxM9T8MqgdjJujK7npO/zhLONLXoNrghVxIHoyp5g/vh\nNN9RHriha2P0iRbrj0Su9HDjHwKBgQDWAtPBfnf99G4JUiWfh+IInRstnPQEgyIc\nwnTLhUXKgVw3qDWrZi2o2/MsvZn99xo+qzL2bMCyFiZfPNNx5e1onYy+5rUDRj59\nP0Knt18CqKR19IJoiKXM5KkE9frRuJS5GA8xXRkpVH2fbK428I7zrajNG0m1APZL\npnyKkcjzdwKBgQDsGNg8iRRkcjeA1KDrvDUOv+txb1zArY0ohZ+SdRScI/HjFrcl\nTXfqqYKHJRnGS8iNRO7FWor5VJKR2C6cvt3kj+R91TKlfFTZcuY/IZlytmqIjXY2\nm8KqYEZRunlhrCA9eTvML8S8o36Mij793GWev7owE8t4+B18jHNWsZ/EhQKBgQDR\nIeQiot7JSZI6A4+GjPgCaNyFP2pp+mdcaV5PAAaKdM1UCkmgG/Kkn4PMBeA1AMMh\n2JStoOrRXLnUuZD7LbBJWiSO7M6Yy40HQcl2Mchjxb8pEW5ajqZPSmgs099uEA0t\nr2gxWgPbkphMMZ0xTPS1Bc/91xu5CJ6moKP1ma8g0wKBgQDTputj3MjsLgHoQMhB\n6Of5wWyavc/784/SvH6CgmjD9Xf/bc47p4CRknDfQbYtjFtrclotOReHhBvvhHn8\n6wF0j2jC2zna7zOYWqYkf2AYU5F6/2RxFDNyJ4LiyNMJXDZTPGmJeg7d6o2NruwE\nGuA8gG6WiA2xsqBkYPqjQ5Wppw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "tutorialphpzinho@tutorialphp-d2827.iam.gserviceaccount.com",
+  "client_id": "113932316751778148343",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tutorialphpzinho%40tutorialphp-d2827.iam.gserviceaccount.com"
+}

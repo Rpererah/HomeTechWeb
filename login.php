@@ -51,9 +51,9 @@
             </div>
 
             <!-- Login Form -->
-            <form method="POST">
-              <input type="email" id="email" class="fadeIn second" name="userEmail" placeholder="exemplo@teste.com">
-              <input type="password" id="password" class="fadeIn third" name="userPassword" placeholder="Senha">
+            <form method="POST" action="logar.php">
+              <input type="email" id="email" class="fadeIn second" name="email" placeholder="exemplo@teste.com">
+              <input type="password" id="password" class="fadeIn third" name="password" placeholder="Senha">
               <input type="submit" class="fadeIn fourth" value="Acessar">
             </form>
 
@@ -63,35 +63,6 @@
 
           </div>
         </div>
-
-    <?php
-    //verificar se clicou no botão
-    //if (isset($_POST['userEmail'])){
-    //    $email = addslashes($_POST['userEmail']);
-    //    $senha = addslashes($_POST['userPassword']);
-    //    //verificando se está preenchido
-    //    if(!empty($nome) && !empty($senha)){
-    //        $u->Banco::conectar();
-    //        if($exception->getMessage() == ""){ //verificando conexão
-    //            if($u->logar($email,$senha)){
-    //                header("location: crud/index.php");
-    //            } else {
-    //                ?>
-                    <div class="msg-erro">
-                    <!-- "Preencha todos os campos!" -->
-                    </div>
-                    <?php
-    //            }
-    //        } else {
-    //            ?>
-                <div class="msg-erro">
-                    <?php // echo "Erro: ".$exception->getMessage(); ?>
-                </div>
-                <?php
-    //        }
-    //    } 
-    //}
-    ?>
 
     </body>
 </html>

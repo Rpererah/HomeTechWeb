@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="BR">
+<html lang="pt-br">
   <head>
     <title>HomeTech</title>
     <meta charset="utf-8">
@@ -59,7 +59,7 @@
 
           <div class="col-4">
           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-            <a href="#home-section"><img src="images/LHT.png" height="90px" width="130px" alt=""></a></h1>
+            <a href="#home-section"><img src="images/LHT.png" height="90px" width="148px" alt=""></a></h1>
             </ul>
           </div>
 
@@ -69,7 +69,7 @@
                 <li><a href="index.php" class="nav-link">Inicio</a></li>
                 <li><a href="servicosEportifolio.php" class="nav-link">Serviços</a></li>
                 <li><a href="contatoseprecos.php" class="nav-link">Contato</a></li>
-                <li><a href="crud/index.php" class="nav-link">Admin</a></li>
+                <li><a href="login.php" class="nav-link">Admin</a></li>
               </ul>
             </nav>
 

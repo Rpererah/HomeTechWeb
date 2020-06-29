@@ -35,7 +35,7 @@ if($nome!=null || $nome!="" && $email!=null || $email!="" && $message!=null || $
   }
   </style>
     <html>
-        <table width='510' border='1' cellpadding='1' cellspacing='1' bgcolor='#CCCCCC'>
+        <table width='510'>
             <tr>
   <tr>
                  <td width='500'>Nome:$nome</td>

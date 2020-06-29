@@ -55,7 +55,7 @@
               </li>
               <li class="mb-3">
                 <strong class="d-block mb-1">Email</strong>
-                <span>HtHometech@gmail.com</span>
+                <span>techhometech2020@gmail.com</span>
               </li>
             </ul>
           </div>

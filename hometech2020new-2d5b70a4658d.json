@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hometech2020new",
+  "private_key_id": "2d5b70a4658de1dfe2e0a735f80669f777e8625f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDt0HeE7Lq/GS7O\nOV4FGgM/jHIidYJ7FplEOaWBerP1R+eRjnibkE5pleuMKMVxqAd0dO8ZcPaQpoyY\nMKIKwZucjFXHcC3sE3n0HyClSiWmD7QB7yhsPjdbkkQKGwOxkJuTmYRdL53/kkqb\n5ETcl3wXiVLTjNhl0lU7RkEIK52hqBlDl3huvJo/DtkgHheDvIrZoaEJTTL0wVRX\nKNeQyUh2hkjfMQGmEW4cpONDhLYpY7tSxjlNKiP3CAmzCVkwT/Asl1vY153UvaCC\nKA0a6hWprPkP5kc+EWFXIHj2yligKrsD9k207aJLfZy0aq/STHoi7ElcEvtuOr6v\nlG+qRDCbAgMBAAECggEAE3FNtDJeei0m5HlQNH6R8WocErEkv8dzNF66J0HO4KjG\nR+Ir/hvoLT2yijzzF32zTlQZEC1qGx1itTaUqOh3Pm9CvBFxz7Ev8UNyOdE8Dr2N\n6/KPjXnwsK3enizjOmsmLQUKC0xPUIu3SdN5xcckwA/cE6uaLYjqqvPtcSuPsZ2S\nSedZvkqoctJ4pnGITqrS+G2+sno/hNPI407c+zKldhSn/M0+Uj2luGdj7bJbQ+M1\nNpMjB4ezNu8C9IKUTPAidwq3dmxw35NetsNPBBkGokuSaa63kTvP2a0U96KUNsMp\nvgQaj/mjm1FflGmjAlkxIX47Miug+AMWI72P3Zt/kQKBgQD6EDJH4YPH0189UBnC\n1WZ578oeS/G4dyACVeeyxWa2M2HtydNCCNaA4IQcTYZ1XO2Stj7YkXqaNyJblBhI\ne+Jn0pbIyGHWo7UmeTALW4Z4l8nvS0yeAjDunlEucvL2WbfIkxAn0EbyNoyd794O\nW22ui6KQxMg5XlYY25oGIBW0BQKBgQDzddNKFS6P1252mMaQfaSh0K0HdYxPDlab\niEo1OkALG8Q4nOd9UlBt2oKc3Qn19w7OzBmZv9r7PgXjdxGEKXc2ZvER6TC5JMpB\nK/EjIC/6LQP4y1S0ObVlLViTxhWx6BFDOg5Zro4+tEkOi4njHQk/eFuOt6WUTpOb\nd9/drrcUHwKBgQDpqujRMnIp7+I3MPphjXfMyb1cwiqF7QsEI7H2428vIqSHxuiZ\n9Bg9JY9Nw0O5t7RoO9ROGuMt6Ac6/BAU626NBcPQqy6Bm0hTQzsZ4dSuK2iPKxXV\nMMb4swe5F8DhYsTRsFqQWZdyDncnvlUJpXXAfMrT7I4MzZI2eD5dKu4c4QKBgDcT\njqsRw6jSybCWu0Twx4+7z4kCdK1lxv4EhRUpild4/pj4Ff5p4rwXVLj74Eb+jyEF\nVz1LA9UWoOpmg1Xss4VhIGQ25sjbo82+jRyvKWtlR6K/DPiAnaK38XPsufe3UkBt\nH9X2AUP6MRTTSGxSo0byiXPt4817QTVIlyJlZhFtAoGAePqzGwOYAF+/9WsBNXJ5\nSdSXL4cogHbviqe3wUXCN7UWyR6lD1/+BcbyRCZ6bYd9A2u5SnLq1TfhvfT9r29Q\nrG8Drbnt1waV9q78LNwJcR+VuEWoQ+XMdbOVR/JTp5UZFsH0zA4MGSAND6u95Uxd\nFkb8l98L3SoJdoM5971SeC4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hometechzinha@hometech2020new.iam.gserviceaccount.com",
+  "client_id": "111698864885429620936",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hometechzinha%40hometech2020new.iam.gserviceaccount.com"
+}

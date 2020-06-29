@@ -1,3 +1,15 @@
+<?php
+session_start();
+if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == true) and (!isset ($_SESSION['dados'])==true))
+{
+  unset($_SESSION['login']);
+  unset($_SESSION['senha']);
+  unset($_SESSION['dados']);
+  header('location:./../login.php');
+  }
+  $logado=$_SESSION['login'];
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -20,7 +32,7 @@
         <div class="fixed-top">
   <div class="collapse" id="navbarToggleExternalContent">
   </div>
-    <a href="./../index.php">
+    <a href='./../sair.php'>
   <nav class="navbar navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
     <svg class="bi bi-arrow-left" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +41,7 @@
 </svg>
     </button>
     </a>
-    <div style="color:white"><b>Painel de controle HomeTech</b></div>
+    <div style="color:white"><?='  Bem vindo ',$logado, '  |' ?><b> Painel de controle HomeTech</b></div>
   </nav>
 </div>
 <br>

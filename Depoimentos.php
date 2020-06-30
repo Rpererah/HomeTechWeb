@@ -21,8 +21,8 @@ Eu acho que a ideia de inclusão de PcDs engloba as pessoas de uma forma que al�
           </div>
           <div class="slide">
             <blockquote>
-              <p>Eu ajudei na criação da ideia e adorei que deu resultado</p>
-              <p><cite>&mdash; Ana Maria Picolomini</cite></p>
+              <p>Ao firmarmos a parceria com a HomeTech, iniciamos uma nova etapa da história da C.O.D. Profissionalismo e competência definem essa empresa, sempre dispostos a nos atender, agradecemos imensamente por fazer o C.O.D se tornar realidade. Vida longa e prospera à toda família HomeTech.</p>
+              <p><cite>&mdash; Juliana Munhoz</cite></p>
             </blockquote>
           </div>
         </div>

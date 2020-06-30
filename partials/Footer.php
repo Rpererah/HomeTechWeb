@@ -1,3 +1,4 @@
+<div class="container">
 <footer class="site-section bg-light footer">
       <div class="container">
         <div class="row mb-5">
@@ -34,7 +35,7 @@
         
 
         <div class="row">
-          <div class="col-12 text-center">
+          <div class="col-11 text-center">
             <p>
             <br>
             <br>
@@ -76,5 +77,6 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
+  </div>
   </body>
 </html>

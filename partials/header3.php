@@ -59,7 +59,7 @@
 
           <div class="col-4">
           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-            <a href="#home-section"><img src="images/LHT.png" height="90px" width="148px"  alt=""></a></h1>
+            <a href="index.php"><img src="images/LHT.png" height="90px" width="148px"  alt=""></a></h1>
             </ul>
           </div>
 

@@ -57,14 +57,14 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
 
-          <div class="col-4">
+        <div class="col-4">
           <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-            <a href="#home-section"><img src="images/LHT.png" height="90px" width="148px" alt=""></a></h1>
+            <a href="index.php"><img src="images/LHT.png" height="90px" width="148px"  alt=""></a></h1>
             </ul>
           </div>
 
           <div class="col-8">
-            <nav class="site-navigation position-relative text-right" role="navigation">
+            <nav class="site-navigation position-relative text-right">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="index.php" class="nav-link">Inicio</a></li>
                 <li><a href="servicosEportifolio.php" class="nav-link">Serviços</a></li>
@@ -94,7 +94,7 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <h1 class="text-white" data-aos="fade-up" data-aos-delay="">Automatize o que desejar</h1>
-                <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">Tornando-se acessivel cada dia mais</p>
+                <p class="lead text-white" data-aos="fade-up" data-aos-delay="100">Tornando-se acessível cada dia mais</p>
                 <p data-aos="fade-up" data-aos-delay="200"><a href="#blog-section" class="btn smoothscroll btn-primary">Confira nossas notícias</a></p>
 
               </div>

@@ -5,7 +5,7 @@ if((!isset ($_SESSION['login']) == true) and (!isset ($_SESSION['senha']) == tru
   unset($_SESSION['login']);
   unset($_SESSION['senha']);
   unset($_SESSION['dados']);
-  header('location:./../login.php');
+  header('location:./../index.php');
   }
   $logado=$_SESSION['login'];
 

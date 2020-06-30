@@ -18,9 +18,9 @@
         
               <div class="col-lg-3">
                 <h3 class="footer-title">Segue a gente</h3>
-                <a target="_blank" href="//www.twitter.com" class="social-circle m-2"><span class="icon-twitter"></span></a>
+                <a target="_blank" href="//www.twitter.com/Hometec05323173" class="social-circle m-2"><span class="icon-twitter"></span></a>
                 <a target="_blank" href="//www.facebook.com/hometech.fiec.1" class="social-circle m-2"><span class="icon-facebook"></span></a>
-                <a target="_blank" href="//www.instagram.com" class="social-circle m-2"><span class="icon-instagram"></span></a>
+                <a target="_blank" href="//www.instagram.com/techhometech2020/" class="social-circle m-2"><span class="icon-instagram"></span></a>
                 <a target="_blank" href="//www.github.com/Rpererah/HomeTechWeb" class="social-circle m-2"><span class="icon-github"></span></a>
               </div>
 

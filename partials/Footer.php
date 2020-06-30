@@ -1,6 +1,5 @@
 <div class="container">
 <footer class="site-section bg-light footer">
-      <div class="container">
         <div class="row mb-5">
           <div class="col-lg-3">
             <h3 class="footer-title">Sobre o projeto</h3>
@@ -11,31 +10,32 @@
               <div class="col-lg-3">
                 <h3 class="footer-title">Serviços</h3>
                 <ul class="list-unstyled">
-                  <li><a href="#services-section">Instalação</a></li>
-                  <li><a href="#services-section">Automação</a></li>
-                  <li><a href="#services-section">Suporte</a></li>
+                  <li><a href="servicosEportifolio.php">Instalação</a></li>
+                  <li><a href="servicosEportifolio.php">Automação</a></li>
+                  <li><a href="servicosEportifolio.php">Suporte</a></li>
                 </ul>
               </div>
         
-          <div class="col-lg-3">
-            <h3 class="footer-title">Segue a gente</h3>
-            <a target="_blank" href="//www.twitter.com" class="social-circle m-2"><span class="icon-twitter"></span></a>
-            <a target="_blank" href="//www.facebook.com/hometech.fiec.1" class="social-circle m-2"><span class="icon-facebook"></span></a>
-            <a target="_blank" href="//www.instagram.com" class="social-circle m-2"><span class="icon-instagram"></span></a>
-            <a target="_blank" href="//www.linkedin.com" class="social-circle m-2"><span class="icon-linkedin"></span></a>
-          
-         </div>
-
-        <div class="col-lg-6">
-            <h2 class="footer-title mb-6">HomeTech</h2>
-            <h6>"Automatize o simples, simplifique o fácil"</h3>
-                </div>
+              <div class="col-lg-3">
+                <h3 class="footer-title">Segue a gente</h3>
+                <a target="_blank" href="//www.twitter.com" class="social-circle m-2"><span class="icon-twitter"></span></a>
+                <a target="_blank" href="//www.facebook.com/hometech.fiec.1" class="social-circle m-2"><span class="icon-facebook"></span></a>
+                <a target="_blank" href="//www.instagram.com" class="social-circle m-2"><span class="icon-instagram"></span></a>
+                <a target="_blank" href="//www.github.com/Rpererah/HomeTechWeb" class="social-circle m-2"><span class="icon-github"></span></a>
               </div>
+
+              <br><br><br><br>
+
+              <div class="col-lg-6">
+                <h2 class="footer-title mb-6">HomeTech</h2>
+                <h6>"Automatize o simples, simplifique o fácil"</h3>
+            </div>
           </div>
+        </div>
         
 
-        <div class="row">
-          <div class="col-11 text-center">
+        <div class="col-lg-12">
+          
             <p>
             <br>
             <br>
@@ -47,7 +47,7 @@
                   aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>  
-          </div>
+          
         </div>
       </div>
     </footer>
@@ -77,6 +77,5 @@
   <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
   </script>
-  </div>
   </body>
 </html>

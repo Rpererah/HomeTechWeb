@@ -3,8 +3,9 @@
       <div class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <h2 class="section-title mb-3">Valores</h2>
+            <h2 class="mb-3">Valores</h2>
           </div>
+          <br><br><br><br>
         </div>
         <div class="row mb-5">
           <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">

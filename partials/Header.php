@@ -66,10 +66,10 @@
           <div class="col-8">
             <nav class="site-navigation position-relative text-right">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <a href="index.php" class="nav-link"><li>Inicio</li></a>
-                <a href="servicosEportifolio.php" class="nav-link"><li>Serviços</li></a>
-                <a href="contatoseprecos.php" class="nav-link"><li>Contato</li></a>
-                <a href="login.php" class="nav-link"><li>Admin</li></a>
+                <a href="index.php" class="nav-link"><li class="nav-link"><font color=black>Inicio</font></li></a>
+                <a href="servicosEportifolio.php" class="nav-link"><li class="nav-link"><font color=black>Serviços</font></li></a>
+                <a href="contatoseprecos.php" class="nav-link"><li class="nav-link"><font color=black>Contato</font></li></a>
+                <a href="login.php" class="nav-link"><li class="nav-link"><font color=black>Admin</font></li></a>
               </ul>
             </nav>
 

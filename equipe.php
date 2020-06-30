@@ -14,9 +14,9 @@
               <figure>
                 <img src="images/team1 (4).png" alt="Image" class="img-fluid">
                 <div class="row" style='justify-content: center; align-items: center;'>
-                  <a href="https://www.facebook.com/pedro.costaferreira.5"> <img class="img-fluid" width='40' src="images/face1.png"></a>  
-                  <a href="#"><img class="img-fluid" width='40' src="images/link1.png"></a>
-                  <a href="https://www.instagram.com/pe_co_fe/"><img class="img-fluid" width='40' src="images/instagram.png"></a>
+                  <a href="https://www.facebook.com/pedro.costaferreira.5" target="_blank"> <img class="img-fluid" width='40' src="images/face1.png"></a>  
+                  <a href="https://www.linkedin.com/in/pedro-costa-ferreira-9b496117b/" target="_blank"><img class="img-fluid" width='40' src="images/link1.png"></a>
+                  <a href="https://www.instagram.com/pe_cofe/" target="_blank"><img class="img-fluid" width='40' src="images/instagram.png"></a>
               </div>
               </figure>
               <div class="p-3">
@@ -28,11 +28,11 @@
           <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <figure>
-                <img src="images/team1 (1).jpg" alt="Image" class="img-fluid">
+                <img src="images/team1.png" alt="Image" class="img-fluid">
                 <div class="row" style='justify-content: center; align-items: center;'>
-                <a href="https://www.facebook.com/profile.php?id=100005111438104"><img class="img-fluid" width='40' src="images/face1.png"></a>
-                <a href="#"><img class="img-fluid" width='40' src="images/link1.png"></a>
-                <a href="https://www.instagram.com/rpererah/"><img class="img-fluid" width='40' src="images/instagram.png"></a>
+                <a href="https://www.facebook.com/profile.php?id=100005111438104" target="_blank"><img class="img-fluid" width='40' src="images/face1.png"></a>
+                <a href="https://www.linkedin.com/in/rafael-pereira-91a43a1a6/" target="_blank"><img class="img-fluid" width='40' src="images/link1.png"></a>
+                <a href="https://www.instagram.com/rpererah/" target="_blank"><img class="img-fluid" width='40' src="images/instagram.png"></a>
                 </div>
               </figure>
               <div class="p-3">

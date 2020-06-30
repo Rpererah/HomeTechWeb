@@ -2,10 +2,10 @@
 
 class Banco
 {
-    private static $dbNome = 'house';
-    private static $dbHost = 'localhost:3306';
-    private static $dbUsuario = 'root';
-    private static $dbSenha = '';
+    private static $dbNome = 'u295782336_hometech';
+    private static $dbHost = 'localhost';
+    private static $dbUsuario = 'u295782336_hometech';
+    private static $dbSenha = 'rf212296';
     
     private static $cont = null;
     
